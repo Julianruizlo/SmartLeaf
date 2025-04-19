@@ -1,46 +1,43 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { HomeCard, SettingsButton, ButtonPerfil } from '../components/Elementos/';
+import JardinImage from '../assets/Jardin.jpg';
+import CalendarioImage from '../assets/Calendario.jpg';
+import BiblitecaImage from '../assets/Biblioteca.jpg';
+import CamaraImage from '../assets/Analisis.jpg';
 
 class Home extends Component {
     render() {
         return (
             <div>
                 <div className="app">
-      <header className="header">
-        <h1>SmartLeaf</h1>
-        <div className="level">
-          <span>Tu Jardín</span>
-          <input type="range" min="1" max="5" defaultValue="3" />
-          <span>4</span>
-        </div>
-      </header>
-      <main className="main">
-        <h2>Gestión personalizada del jardín</h2>
-        <div className="card">
-          <h3>Tus plantas</h3>
-          <p>Ver todas las plantas que tienes en tu jardín</p>
-          <Link to="/huerta"><button>Ver plantas</button></Link>
-        </div>
-        <div className="card">
-          <h3>Calendario de riego</h3>
-          <p>Saber cuándo es el mejor momento para regar tus plantas</p>
-          <Link to="/calendario"><button>Calendario</button></Link>
-        </div>
-        <div className="card">
-          <h3>Análisis de plantas</h3>
-          <p>Obtener consejos personalizados para cada planta</p>
-          <Link to="/camara"><button>Análisis</button></Link>
-        </div>
-        <div className="card">
-          <h3>Biblioteca botánica</h3>
-          <p>Aprender sobre plantas y descubrir nuevas especies</p>
-          <Link to="/biblioteca"><button>Explorar biblioteca</button></Link>
-        </div>
-      </main>
-      <footer className="footer">
-      <Link to="/consultor"><button>Hablar con asistente</button></Link>
-      </footer>
-    </div>
+                    <header className="header">
+                        <SettingsButton/>
+                        <ButtonPerfil/>
+                        <h1>SmartLeaf</h1>
+                        <div className="level">
+                            <span>Tu Jardín</span>
+                            <input type="range" min="1" max="5" defaultValue="3" />
+                            <span>4</span>
+                        </div>
+                    </header>
+                    <main className="main">
+                        <h2>Gestión personalizada del jardín</h2>
+                        <HomeCard 
+                            nombre="Tus plantas" descripcion="Ver todas las plantas que tienes en tu jardín" link="/huerta" src1={JardinImage} />
+                        <HomeCard 
+                            nombre="Calendario de riego" descripcion="Saber cuándo es el mejor momento para regar tus plantas" link="/calendario" src1={CalendarioImage}/>
+                        <HomeCard 
+                            nombre="Análisis de plantas" descripcion="Obtener consejos personalizados para cada planta" link="/camara" src1={CamaraImage}/>
+                        <HomeCard 
+                            nombre="Biblioteca botánica" descripcion="Aprender sobre plantas y descubrir nuevas especies" link="/biblioteca" src1={BiblitecaImage}/>
+                        <HomeCard 
+                            nombre="Pruebas" descripcion="Las pruebas para los elementos" link="/pruebas"/>
+                    </main>
+                    <footer className="footer">
+                        <Link to="/consultor"><button>Hablar con asistente</button></Link>
+                    </footer>
+                </div>
             </div>
         );
     }

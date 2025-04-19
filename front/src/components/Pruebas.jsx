@@ -1,17 +1,19 @@
 import React from 'react';
-import "../App.css"
 import { ButtonPerfil, BackButton, SettingsButton } from './Elementos';
+import { Link } from 'react-router-dom';
+import "../App.css"
 
-function CameraScanner() {
+function Pruebas() {
   return (
     <div>
       <BackButton/>
-      <h2>Escanear Planta</h2>
+      <h2>Pruebas</h2>
       <SettingsButton/>
       <ButtonPerfil/>
-      
     </div>
+
+
   );
 }
 
-export default CameraScanner;
+export default Pruebas;

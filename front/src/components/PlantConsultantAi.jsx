@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { ButtonPerfil, BackButton, SettingsButton } from './Elementos';
 import "../App.css"
 
 function PlantConsultantAI() {
@@ -29,6 +29,7 @@ function PlantConsultantAI() {
     setInput('');
   };
   return (
+
    <div > 
     <div className='calendar-container'>
     <header className="calendar-header">
@@ -58,6 +59,7 @@ function PlantConsultantAI() {
       </div>
 
     </div>
+
     </div>
   );
 }

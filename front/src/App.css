@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
 /*Home*/
 body {
     font-family: 'Poppins', sans-serif;
@@ -80,6 +83,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
+    text-align: center;
   }
   
   button:hover {
@@ -110,13 +114,6 @@ body {
     font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 10px;
-  }
-  
-  .back-button, .settings-button {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
   }
   
   .calendar-month p {
@@ -192,6 +189,107 @@ body {
     background-color: transparent;
     border: none;
   }
+
+
+  /*Boton de cofiguraciones y regreso*/
+
+  .settings-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .settings-button:hover {
+    background-color: #e0e0e0;
+    transform: rotate(20deg);
+  }
+  
+  .settings-button:active {
+    transform: scale(0.95);
+  }
+
+  .back-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #f0f0f0;
+    transform: translateX(-2px);
+  }
+  
+  .back-button:active {
+    transform: scale(0.95);
+  }
+
+  /*Boton de perfil*/
+  .perfil-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .perfil-button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+  }
+  
+  .perfil-button:active {
+    transform: scale(0.95);
+  }
+
+  /*HomeCard*/
+  .home-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f8f4;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .home-card-text {
+    flex: 1;
+  }
+  
+  .home-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #1b1b1b;
+  }
+  
+  .home-card-description {
+    font-size: 14px;
+    color: #3aaa65;
+    margin: 4px 0 12px;
+  }
+  
+  .home-card-button {
+    background-color: #e6f5ec;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    color: #1b1b1b;
+
   /*chatbot*/
   .chatbot-container {
     width: 100%;
@@ -297,10 +395,190 @@ body {
     border: none;
     border-radius: 20px;
     font-weight: bold;
+
     cursor: pointer;
     transition: background-color 0.2s ease;
   }
-  
-  .chatbot-input button:hover {
-    background-color: #c6ebdd;
+
+  .home-card-button:hover {
+    background-color: #d3f0dd;
   }
+
+  .home-card-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-left: 16px;
+  }
+
+  /*Login*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8fbf7;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Genérico para el contenedor */
+.container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 70px 70px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.login-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.login-subtitle {
+  text-align: left;
+  margin: 10px 0 20px 5px;
+  font-size: 14px;
+}
+
+.login-subtitle .rec-button {
+  background: none;
+  border: none;
+  color: #2e7d32;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group input {
+  width: 350px;
+  padding: 18px;
+  border: none;
+  border-radius: 18px;
+  background-color: #ecf6ed;
+  color: #2e7d32;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form-group input::placeholder {
+  color: #2e7d32
+}
+
+.login-button {
+  padding: 18px;
+  background-color: #00e600;
+  color: #000;
+  border: none;
+  border-radius: 18px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #00cc00;
+}
+
+.login-error {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+.login-sign {
+  margin-top: 20px;
+}
+
+.login-sign .rec-button {
+  background: none;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.register-container {
+  background-color: #f8fbf7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.register-box {
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.login-button:hover {
+  background-color: #dbeedc;
+}
+
+.alt-login {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.privacy-text {
+  font-size: 13px;
+  color: #3b7b3b;
+  line-height: 1.5;
+}
+
+.link {
+  text-decoration: underline;
+  color: #3b7b3b;
+}
