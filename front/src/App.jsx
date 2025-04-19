@@ -13,7 +13,7 @@ import Perfil from "./components/Perfil.jsx";
 import Settings from "./components/Settings.jsx";
 import Jardin from "./assets/jardin.jpg";
 import Login from "./pages/Login.jsx";
-
+import PlantIdentifier from "./components/PlantIdentifier.jsx";
 
 import "./App.css";
 
@@ -26,7 +26,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/huerta" element={<Garden />} />
             <Route path="/calendario" element={<Calendar />} />
-            <Route path="/camara" element={<CameraScanner />} />
+            <Route path="/camara" element={<PlantIdentifier />} />
             <Route path="/biblioteca" element={<PlantsLibrary />} />
             <Route path="/consultor" element={<PlantConsultantAI />} />
             <Route path="/pruebas" element={<Pruebas />} />
@@ -34,6 +34,7 @@ function App() {
             <Route path="/perfil" element={<Perfil />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/jardin" element={<img src={Jardin} alt="jardin" />} />
+            <Route path="/identificador" element={<PlantIdentifier />} />
           </Routes>
         </div>
     </Router>
