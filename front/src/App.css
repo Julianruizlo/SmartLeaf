@@ -112,13 +112,6 @@ body {
     margin-bottom: 10px;
   }
   
-  .back-button, .settings-button {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-  
   .calendar-month p {
     text-align: center;
     font-weight: bold;
@@ -191,4 +184,175 @@ body {
   .calendar-day.empty {
     background-color: transparent;
     border: none;
+  }
+
+  /*Boton de cofiguraciones y regreso*/
+
+  .settings-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .settings-button:hover {
+    background-color: #e0e0e0;
+    transform: rotate(20deg);
+  }
+  
+  .settings-button:active {
+    transform: scale(0.95);
+  }
+
+  .back-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #f0f0f0;
+    transform: translateX(-2px);
+  }
+  
+  .back-button:active {
+    transform: scale(0.95);
+  }
+
+  /*Boton de perfil*/
+  .perfil-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .perfil-button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+  }
+  
+  .perfil-button:active {
+    transform: scale(0.95);
+  }
+
+  /*HomeCard*/
+  .home-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f8f4;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .home-card-text {
+    flex: 1;
+  }
+  
+  .home-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #1b1b1b;
+  }
+  
+  .home-card-description {
+    font-size: 14px;
+    color: #3aaa65;
+    margin: 4px 0 12px;
+  }
+  
+  .home-card-button {
+    background-color: #e6f5ec;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    color: #1b1b1b;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .home-card-button:hover {
+    background-color: #d3f0dd;
+  }
+
+  .home-card-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-left: 16px;
+  }
+
+  /*Login*/
+
+  .login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .login-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .login-form .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #45a049;
+  }
+  
+  .login-error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
   }
