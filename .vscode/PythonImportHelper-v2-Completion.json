@@ -1,0 +1,20 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "kind": 6,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "class Config:\n    SQLALCHEMY_DATABASE_URI = os.getenv(\"DATABASE_URL\", \"sqlite:///database.db\")\n    SQLALCHEMY_TRACK_MODIFICATIONS = False\n    SECRET_KEY = os.getenv(\"SECRET_KEY\", \"super-secret-key\")",
+        "detail": "config",
+        "documentation": {}
+    }
+]
