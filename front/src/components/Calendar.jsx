@@ -1,12 +1,14 @@
 import React from 'react';
+import { ButtonPerfil, BackButton, SettingsButton } from '../Elementos';
 import { Link } from 'react-router-dom';
 import "../models/Calendar.css"
 
+
 function Calendar() {
   const plantPlans = [
-    { name: 'Tomato', action: 'Watering', date: 'January 5', icon: '🌱' },
-    { name: 'Kale', action: 'Fertilizing', date: 'January 15', icon: '🌿' },
-    { name: 'Rosemary', action: 'Pruning', date: 'January 30', icon: '🌱' }
+    { name: 'Tomate', action: 'Regar', date: 'Febrero 5', icon: '🌱' },
+    { name: 'Perro', action: 'Fertilizar', date: 'Febrero 15', icon: '🌿' },
+    { name: 'Rosa', action: 'Podar', date: 'Febrero 30', icon: '🌱' }
   ];
   const today = new Date();
   const currentDay = today.getDate();
@@ -20,9 +22,11 @@ function Calendar() {
   return (
     <div className="calendar-container">
       <header className="calendar-header">
-        <Link to = "/"><button className="back-button">←</button></Link>
+        <BackButton/>
         <h2>Calendario</h2>
-        <button className="settings-button">⚙️</button>
+        <SettingsButton/>
+        <ButtonPerfil/>
+
       </header>
 
       <div className="calendar-month">

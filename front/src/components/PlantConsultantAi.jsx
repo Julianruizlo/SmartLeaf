@@ -1,6 +1,9 @@
+
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import "../models/Chatbot.css"
+import { ButtonPerfil, BackButton, SettingsButton } from '../Elementos';
+
 
 function PlantConsultantAI() {
   const [messages, setMessages] = useState([]);
@@ -29,6 +32,7 @@ function PlantConsultantAI() {
     setInput('');
   };
   return (
+
    <div > 
     <div className='calendar-container'>
     <header className="calendar-header">
@@ -58,6 +62,7 @@ function PlantConsultantAI() {
       </div>
 
     </div>
+
     </div>
   );
 }

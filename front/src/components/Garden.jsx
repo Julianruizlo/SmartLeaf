@@ -1,9 +1,15 @@
 import React from 'react';
+import { ButtonPerfil, BackButton, SettingsButton } from '../Elementos';
 
 function Garden() {
   return (
     <div>
-      <h2>Mi Huerta</h2>
+       <header className="calendar-header">
+          <BackButton/>
+          <SettingsButton/>
+          <h1>Mi Huerta</h1>
+        
+        </header>
       
     </div>
   );
