@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+
+
 class Home extends Component {
     render() {
         return (
@@ -37,9 +39,11 @@ class Home extends Component {
           <Link to="/biblioteca"><button>Explorar biblioteca</button></Link>
         </div>
       </main>
-      <footer className="footer">
-      <Link to="/consultor"><button>Hablar con asistente</button></Link>
-      </footer>
+      <div className="card">
+          <h3>Consulta con IA</h3>
+          
+          <Link to="/consultor"><button>Hablar con asistente</button></Link>
+      </div>
     </div>
             </div>
         );

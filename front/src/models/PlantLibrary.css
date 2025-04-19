@@ -1,0 +1,66 @@
+.library-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 16px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fdf9;
+  }
+  
+  .library-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: #1e3d2f;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 14px;
+    background-color: #e3f3eb;
+    font-size: 16px;
+  }
+  
+  .section {
+    margin-bottom: 32px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #2a4a36;
+  }
+  
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .plant-card {
+    width: 110px;
+    height: 130px;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .plant-image {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+  }
+  
+  .plant-name {
+    padding: 6px;
+    color: #2b3e2e;
+  }

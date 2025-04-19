@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import "../App.css"
+import "../models/Chatbot.css"
 
 function PlantConsultantAI() {
   const [messages, setMessages] = useState([]);
