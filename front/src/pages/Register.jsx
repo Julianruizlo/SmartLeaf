@@ -1,28 +1,31 @@
-import React, { Component } from 'react';
+import React from "react";
+import "../App.css";
+import Container from "../components/Elementos/Container";
+import ButtonX from "../components/Elementos/ButtonX"; // Importa el botón genérico
 
 function Register() {
   return (
-    <div>
-      <h1>Registro</h1>
-      <form>
-        <label>
-          Nombre:
-          <input type="text" name="name" />
-        </label>
-        <br />
-        <label>
-          Correo electrónico:
-          <input type="email" name="email" />
-        </label>
-        <br />
-        <label>
-          Contraseña:
-          <input type="password" name="password" />
-        </label>
-        <br />
-        <button type="submit">Registrar</button>
-      </form>
-    </div>
+    <Container>
+      <div className="register-box">
+        <h2 className="title">Encuentra la planta perfecta para tu espacio</h2>
+        <p className="subtitle">Comienza por decirnos sobre ti</p>
+
+        <div className="button-group">
+          <ButtonX text="Continuar con Google" />
+          <ButtonX text="Continuar con Apple" />
+          <ButtonX text="Continuar con Facebook" />
+        </div>
+
+        <p className="alt-login">Continuar de otra manera</p>
+
+        <p className="privacy-text">
+          Al continuar, aceptas los{" "}
+          <a href="#" className="link">Términos de servicio</a> y la{" "}
+          <a href="#" className="link">Política de privacidad</a>. Lee nuestro{" "}
+          <a href="#" className="link">Aviso de Privacidad</a>.
+        </p>
+      </div>
+    </Container>
   );
 }
 

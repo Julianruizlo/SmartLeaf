@@ -9,7 +9,7 @@ function Login() {
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
-    e.preventDefault(); // Evita que se recargue la págin
+    e.preventDefault();
 
     if (username === 'admin' && password === '1234') {
       navigate('/home');
@@ -30,8 +30,7 @@ function Login() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Ingresa tu usuario"
-            required
-          />
+            required/>
         </div>
         <div className="form-group">
           <label htmlFor="password"></label>
@@ -41,14 +40,28 @@ function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Ingresa tu contraseña"
-            required
-          />
-          <h3 className="login-subtitle"><button onClick={navigate('/recuperacion')}>Recuperar contraseña</button></h3>
+            required/>
+          <h3 className="login-subtitle">
+            <button
+              type="button"
+              className="rec-button"
+              onClick={() => navigate('/recuperacion')}>
+              Recuperar contraseña
+            </button>
+          </h3>
         </div>
         {error && <p className="login-error">{error}</p>}
         <button type="submit" className="login-button">
           Iniciar Sesión
         </button>
+        <h3 className="login-sign">
+          <button
+            type="button"
+            className="rec-button"
+            onClick={() => navigate('/registrar')}>
+            ¿Nuevo usuario? Regístrate
+          </button>
+        </h3>
       </form>
     </div>
   );

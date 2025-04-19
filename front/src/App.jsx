@@ -13,6 +13,8 @@ import Perfil from "./components/Perfil.jsx";
 import Settings from "./components/Settings.jsx";
 import Jardin from "./assets/jardin.jpg";
 import Login from "./pages/Login.jsx";
+import Registro from "./pages/Register.jsx";
+import Recuperacion from "./components/Recuperacion.jsx";
 
 
 import "./App.css";
@@ -34,6 +36,8 @@ function App() {
             <Route path="/perfil" element={<Perfil />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/jardin" element={<img src={Jardin} alt="jardin" />} />
+            <Route path="/registrar" element={<Registro />} />
+            <Route path="/recuperacion" element={<Recuperacion />} />
           </Routes>
         </div>
     </Router>
