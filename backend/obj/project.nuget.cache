@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "H9p2CiRg2JQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\maria\\Desktop\\Facultad\\Proyecto SEMINARIO\\SmartLeaf\\backend\\backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\maria\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.4\\microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
+    "C:\\Users\\maria\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

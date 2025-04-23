@@ -3,12 +3,12 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace backend.Data.API
+namespace data.API
 {
     public class PlantIdService
     {
         private readonly HttpClient _httpClient;
-        private const string ApiKey = "Lq1gU81VpzPVQMvSmTm1ZHOLiPZuhFBCBYvtEUzzXO7IaIvDm2"; 
+        private const string ApiKey = "Lq1gU81VpzPVQMvSmTm1ZHOLiPZuhFBCBYvtEUzzXO7IaIvDm2";
         private const string Endpoint = "https://api.plant.id/v3/identify";
 
         public PlantIdService(HttpClient httpClient)
@@ -27,8 +27,6 @@ namespace backend.Data.API
 
             var json = JsonSerializer.Serialize(requestBody);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            // Agregar la API key en el header
             content.Headers.Add("Api-Key", ApiKey);
 
             var response = await _httpClient.PostAsync(Endpoint, content);

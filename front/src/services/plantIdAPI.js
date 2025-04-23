@@ -1,29 +1,16 @@
-// src/api/plantIdApi.js
-import axios from 'axios';
+import axios from "axios";
 
-const PLANT_ID_API_KEY = 'Lq1gU81VpzPVQMvSmTm1ZHOLiPZuhFBCBYvtEUzzXO7IaIvDm2'; 
 
-export const identifyPlant = async (imageBase64) => {
-  const url = 'https://api.plant.id/v2/identify';
-
-  const data = {
-    images: [imageBase64],
-    organs: ['leaf'],
-    modifiers: ['crops_fast', 'similar_images'],
-    plant_language: 'es',
-    plant_details: ['common_names', 'url', 'name_authority', 'wiki_description'],
-  };
-
+export async function identificarPlanta(base64Image) {
   try {
-    const response = await axios.post(url, data, {
+    const response = await axios.post("http://localhost:5000/api/planta/identificar", base64Image, {
       headers: {
-        'Content-Type': 'application/json',
-        'Api-Key': PLANT_ID_API_KEY,
+        "Content-Type": "application/json",
       },
     });
     return response.data;
   } catch (error) {
-    console.error('Error identificando la planta:', error);
+    console.error("Error al identificar planta:", error);
     throw error;
   }
-};
+}

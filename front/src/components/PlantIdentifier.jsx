@@ -1,6 +1,6 @@
 // src/components/PlantIdentifier.jsx
 import React, { useState } from 'react';
-import { identifyPlant } from '../services/plantIdAPI';
+import { identificarPlanta } from '../services/plantIdAPI';
 
 const PlantIdentifier = () => {
   const [image, setImage] = useState(null);
@@ -22,7 +22,7 @@ const PlantIdentifier = () => {
   const handleIdentify = async () => {
     setLoading(true);
     try {
-      const data = await identifyPlant(image);
+      const data = await identificarPlanta(image);
       setResult(data);
     } catch (error) {
       alert('Hubo un error al identificar la planta.');
