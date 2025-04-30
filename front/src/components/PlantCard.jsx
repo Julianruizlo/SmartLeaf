@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 
-
-function PlantaCard({ nombre, estado, imagen }) {
+function PlantCard({ nombre, estado, imagen }) {
   const ruta = `/planta/${nombre.toLowerCase()}`;
-
-  
 
   return (
     <div className="planta-card">
@@ -21,4 +18,4 @@ function PlantaCard({ nombre, estado, imagen }) {
   );
 }
 
-export default PlantaCard;
+export default PlantCard;

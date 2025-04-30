@@ -1,8 +1,8 @@
 import React from 'react';
-import { BackButton, SettingsButton } from '../Elementos';
-import "../App.css"
+import { BackButton, SettingsButton } from '../components';
+import "../models/App.css"
 
-function Perfil() {
+function Profile() {
   return (
     <div>
       <header className="calendar-header">
@@ -18,4 +18,4 @@ function Perfil() {
   );
 }
 
-export default Perfil;
+export default Profile;

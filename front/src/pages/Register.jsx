@@ -1,7 +1,7 @@
 import React from "react";
 import '../models/Login.css';
-import Container from "../Elementos/Container";
-import ButtonX from "../Elementos/ButtonX"; // Importa el botón genérico
+import Container from "../components/Container";
+import ButtonX from "../components/ButtonX";
 
 function Register() {
   return (

@@ -6,7 +6,7 @@ import "../models/BottomNav.css";
 function BottomNav() {
   return (
     <nav className="bottom-nav">
-      <NavLink to="/" className="nav-item">
+      <NavLink to="/home" className="nav-item">
         <FaHome size={20} />
         <span>Home</span>
       </NavLink>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { ButtonPerfil, BackButton } from '../Elementos';
-import "../App.css"
+import { ButtonPerfil, BackButton } from '../components';
+import "../models/App.css"
 
 function Settings() {
   return (

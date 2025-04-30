@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonPerfil, BackButton, SettingsButton } from '../Elementos';
+import { ButtonPerfil, BackButton, SettingsButton } from '../components';
 import '../models/PlantLibrary.css';
 
 const plantSections = [

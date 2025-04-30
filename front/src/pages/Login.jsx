@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../models/Login.css';
+import Cookies from 'js-cookie';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -12,7 +13,9 @@ function Login() {
     e.preventDefault();
 
     if (username === 'admin' && password === '1234') {
-      navigate('/home');
+      const userData = { username: 'admin', token: 'tokenDeAutenticacion' };
+      Cookies.set('userData', JSON.stringify(userData), { path: '/' });
+      navigate('/home'); 
     } else {
       setError('Usuario o contraseña incorrectos');
     }

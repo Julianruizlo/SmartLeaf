@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component,useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { HomeCard, SettingsButton, ButtonPerfil } from '../Elementos/';
+import { HomeCard, SettingsButton, ButtonPerfil } from '../components/';
 import JardinImage from '../assets/Jardin.jpg';
 import CalendarioImage from '../assets/Calendario.jpg';
 import BiblitecaImage from '../assets/Biblioteca.jpg';
 import CamaraImage from '../assets/Analisis.jpg';
+import Cookies from 'js-cookie';
+
+import  "../models/App.css"
+
 
 
 
 class Home extends Component {
+
+    
     render() {
         return (
             <div>
@@ -45,5 +51,6 @@ class Home extends Component {
         );
     }
 }
+ export default Home;
 
-export default Home;
+    
