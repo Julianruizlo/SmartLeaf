@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maria\\Desktop\\bibloteca\\Facultad\\Proyecto SEMINARIO\\SmartLeaf\\SmartLeaf\\backend\\backend.csproj": {}
+    "C:\\Users\\lucia\\OneDrive - frt.utn.edu.ar\\3erA\\Seminario\\SmartLeaf\\SmartLeaf\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maria\\Desktop\\bibloteca\\Facultad\\Proyecto SEMINARIO\\SmartLeaf\\SmartLeaf\\backend\\backend.csproj": {
+    "C:\\Users\\lucia\\OneDrive - frt.utn.edu.ar\\3erA\\Seminario\\SmartLeaf\\SmartLeaf\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maria\\Desktop\\bibloteca\\Facultad\\Proyecto SEMINARIO\\SmartLeaf\\SmartLeaf\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\Users\\lucia\\OneDrive - frt.utn.edu.ar\\3erA\\Seminario\\SmartLeaf\\SmartLeaf\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\maria\\Desktop\\bibloteca\\Facultad\\Proyecto SEMINARIO\\SmartLeaf\\SmartLeaf\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maria\\Desktop\\bibloteca\\Facultad\\Proyecto SEMINARIO\\SmartLeaf\\SmartLeaf\\backend\\obj\\",
+        "projectPath": "C:\\Users\\lucia\\OneDrive - frt.utn.edu.ar\\3erA\\Seminario\\SmartLeaf\\SmartLeaf\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\lucia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucia\\OneDrive - frt.utn.edu.ar\\3erA\\Seminario\\SmartLeaf\\SmartLeaf\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lucia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -51,9 +50,17 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.9.0, )"
             }
           },
           "imports": [
@@ -75,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
