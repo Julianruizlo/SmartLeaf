@@ -1,0 +1,35 @@
+.head-name {
+  display: flex; /* Alinea los elementos horizontalmente */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Espacia los elementos */
+  padding: 10px 20px; /* Espaciado interno */
+  background-color: #f9f9f9; /* Fondo claro */
+  border-bottom: 2px solid #e0e0e0; /* Línea sutil debajo */
+}
+
+.logo {
+  width: 30px; /* Tamaño reducido del logo */
+  height: 30px;
+  border-radius: 50%; /* Hace que el logo sea circular */
+  object-fit: cover; /* Ajusta el logo al contenedor */
+  margin: 0; /* Elimina márgenes */
+}
+
+.app-name {
+  font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+  font-weight: 500; /* Peso más ligero */
+  color: #2e7d32; /* Verde elegante */
+  margin: 0; /* Elimina márgenes */
+  flex: 1; /* Ocupa el espacio restante */
+  text-align: center; /* Centra el texto */
+}
+
+.head-buttons {
+  display: flex; /* Alinea los botones horizontalmente */
+  gap: 4px; /* Espacio entre los botones */
+  margin-right: 0; /* Empuja los botones hacia el borde derecho */
+}
+
+.head-buttons > * {
+  margin-left: auto; /* Asegura que los botones estén alineados al borde derecho */
+}
