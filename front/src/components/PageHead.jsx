@@ -5,11 +5,11 @@ import  "../models/PageHeader.css"
 
 const titles = {
   "/home": "Home",
-  "/huerta": "Tus plantas",
-  "/calendario": "Calendario de riego",
-  "/camara": "Análisis de plantas",
+  "/huerta": "🌱 Tus plantas",
+  "/calendario": "🗓️ Calendario ",
+  "/camara": "🕵🏻 Análisis de plantas",
   "/biblioteca": "🌿 Botánica",
-  "/consultor": "Asistente virtual",
+  "/consultor": "👩🏻‍💼 Asistente virtual",
   "/perfil": "Perfil",
   "/settings": "Configuración",
   "/jardin": "Jardín",
