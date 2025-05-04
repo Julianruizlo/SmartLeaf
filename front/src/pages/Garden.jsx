@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { identifyPlant } from '../services/plantIdAPI';
 import { PlantCard, PageHead } from '../components/';
 import { Cilantro, Tomate, Albahaca } from '../assets';
@@ -18,7 +17,7 @@ const Garden = () => {
         const imageBase64 = `data:image/jpeg;base64,${name}`;
         const response = await identifyPlant(imageBase64);
         const imageUrl = response.suggestions[0].plant_details.url;
-        return { nombre: name, imagen: imageUrl, estado: plantActions[index] };
+        return { name, image: imageUrl, status: plantActions[index] };
       });
 
       const plantData = await Promise.all(promises);
@@ -30,9 +29,9 @@ const Garden = () => {
 
   // Ejemplos estáticos de PlantCard
   const examplePlants = [
-    { nombre: 'Cilantro', estado: '¡Regar!', imagen: Cilantro },
-    { nombre: 'Tomates', estado: '¡Cosechar!', imagen: Tomate },
-    { nombre: 'Albahaca', estado: '¡Regar!', imagen: Albahaca },
+    { name: 'Cilantro', status: '¡Regar!', image: Cilantro },
+    { name: 'Tomates', status: '¡Cosechar!', image: Tomate },
+    { name: 'Albahaca', status: '', image: Albahaca },
   ];
 
   return (
