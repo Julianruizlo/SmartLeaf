@@ -5,7 +5,6 @@ function PlantCard({ nombre, estado, imagen }) {
 
   return (
     <div className="planta-card">
-      {/* Imagen clickeable */}
       <Link to={ruta}>
         <img src={imagen} alt={nombre} className="planta-img" />
       </Link>
