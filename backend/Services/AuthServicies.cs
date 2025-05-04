@@ -19,7 +19,7 @@ namespace SmartLeaf.Services
         // Simulación de base de datos
         private List<User> _users = new List<User>
         {
-            new User { Email = "admin@example.com", Password = "123456", Role = "Admin" },
+            new User { Email = "admin@admin.com", Password = "admin", Role = "Admin" },
             new User { Email = "user@example.com", Password = "password", Role = "User" }
         };
 

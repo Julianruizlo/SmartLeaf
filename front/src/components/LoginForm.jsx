@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { login } from "../services/authService";
 import { saveToken } from "../utils/token";
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -16,6 +17,7 @@ function LoginForm() {
       const token = await login(email, password);
       saveToken(token);
       alert("Login exitoso");
+      navigate('/home');
       // redireccionar a otra página si querés
     } catch (err) {
       setError("Credenciales incorrectas");

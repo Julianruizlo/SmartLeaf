@@ -12,7 +12,7 @@ import Pruebas from "./components/Pruebas.jsx";
 import Perfil from "./components/Perfil.jsx";
 import Settings from "./components/Settings.jsx";
 import Jardin from "./assets/jardin.jpg";
-import Login from "./pages/Login.jsx";
+import Login from "./components/LoginForm.jsx";
 import PlantIdentifier from "./components/PlantIdentifier.jsx";
 
 import { getToken } from "./utils/token"; // Asegurate de tener este archivo
