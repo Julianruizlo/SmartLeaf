@@ -1,5 +1,5 @@
 // src/services/authService.js
-const API_URL = "https://localhost:5085/api/auth/login"; // Cambiar si usás otro puerto/backend
+const API_URL = "http://localhost:5085/api/auth/login"; // Cambiar si usás otro puerto/backend
 
 export async function login(email, password) {
   const response = await fetch(API_URL, {
