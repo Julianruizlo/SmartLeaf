@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-export async function identifyPlant(base64Image) {
+export async function identificarPlanta(base64Image) {
   try {
     const response = await axios.post("http://localhost:5085/api/plant/identify", base64Image, {
       headers: {
