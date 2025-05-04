@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { identifyPlant } from '../services/plantIdApi'
-import axios from 'axios';
+import { identifyPlant } from '../services/plantIdAPI'
+//import axios from 'axios';
 import PlantCard from '../components/PlantCard'; 
 import '../models/Garden.css';
 import "../models/calendar.css"
@@ -11,7 +11,7 @@ const Garden = () => {
 
   useEffect(() => {
     const fetchPlants = async () => {
-      const apiKey = 'TU_CLAVE_DE_API';
+      //const apiKey = 'TU_CLAVE_DE_API';
       const plantNames = ['Cilantro', 'Pimientos', 'Tomates', 'Lechuga', 'Albahaca', 'Fresas'];
       const plantActions = ['¡Regar!', '¡Cosechar!', '¡Regar!', '¡Cosechar!', '¡Regar!', '¡Regar!'];
 

@@ -12,19 +12,22 @@
   
   .home-card-text {
     flex: 1;
+    text-align: left; 
   }
   
   .home-card-title {
     font-size: 18px;
     font-weight: bold;
-    margin: 0;
+    margin: 0; 
     color: #1b1b1b;
+    text-align: left; 
   }
   
   .home-card-description {
     font-size: 14px;
     color: #3aaa65;
-    margin: 4px 0 12px;
+    margin: 4px 0 0 0; 
+    text-align: left;
   }
   
   .home-card-button {
@@ -41,9 +44,9 @@
   }
 
   .home-card-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 12px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
     object-fit: cover;
     margin-left: 16px;
   }

@@ -1,35 +1,16 @@
-import React, { Component,useEffect } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { HomeCard, SettingsButton, ButtonPerfil } from '../components/';
-import JardinImage from '../assets/Jardin.jpg';
-import CalendarioImage from '../assets/Calendario.jpg';
-import BiblitecaImage from '../assets/Biblioteca.jpg';
-import CamaraImage from '../assets/Analisis.jpg';
+import { HomeCard, PageHead } from '../components/';
+import { JardinImage, CalendarioImage, BiblitecaImage, CamaraImage } from "../assets/";
 import Cookies from 'js-cookie';
-
 import  "../models/App.css"
 
-
-
-
 class Home extends Component {
-
-    
     render() {
         return (
             <div>
                 <div className="app">
-
-                    <header className="header">
-                        <SettingsButton/>
-                        <ButtonPerfil/>
-                        <h1>SmartLeaf</h1>
-                        <div className="level">
-                            <span>Tu Jardín</span>
-                            <input type="range" min="1" max="5" defaultValue="3" />
-                            <span>4</span>
-                        </div>
-                    </header>
+                    <PageHead />
                     <main className="main">
                         <h2>Gestión personalizada del jardín</h2>
                         <HomeCard 

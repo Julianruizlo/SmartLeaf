@@ -91,4 +91,12 @@ body {
   button:hover {
     background-color: #c8e6c9;
   }
+
+  .home-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1b1b1b;
+    margin-bottom: 10px;
+    text-align: left;
+}
   
