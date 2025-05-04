@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  background-color: #f0f8f4; 
-  border-radius: 16px;
-  padding: 16px;
-  margin: 16px 0;
+  background-color: #edf3f0; 
+  border-radius: 13px;
+  padding: 15px;
+  margin: 10px 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); 
 }
 
@@ -15,7 +15,7 @@
 }
 
 .home-card-title {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: bold;
   margin: 0; 
   color: #1b1b1b; 
@@ -23,18 +23,18 @@
 
 .home-card-description {
   font-size: 14px;
-  color: #3aaa65;
+  color: #328d55;
   margin: 4px 0 0 0;
   text-align: left;
 }
 
 .home-card-button {
-  background-color: #d4f0df; 
+  background-color: #cff0dc; 
   border: none;
   padding: 8px 16px; 
   border-radius: 999px; 
   font-size: 14px;
-  color: #1b1b1b; 
+  color: #131212; 
   cursor: pointer;
   transition: background-color 0.3s ease; 
 }
@@ -46,7 +46,7 @@
 .home-card-image {
   width: 120px; 
   height: 130px;
-  border-radius: 10px; 
+  border-radius: 8px; 
   object-fit: cover; 
   margin-left: 16px; 
 }

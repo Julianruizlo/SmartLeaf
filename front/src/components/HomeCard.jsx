@@ -10,7 +10,7 @@ function HomeCard({ nombre, descripcion, link, src1}) {
         <p className="home-card-description">
           {descripcion}
         </p>
-        <Link to={link}><button>Ir a {nombre}</button></Link>
+        <Link to={link}><button className="home-card-button">{nombre}</button></Link>
       </div>
       <img
         className="home-card-image"
