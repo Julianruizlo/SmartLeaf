@@ -1,21 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Home from "../pages/Home.jsx";
-import NotFound from "../pages/NotFound.jsx";
-import Garden from "../pages/Garden.jsx";
-import Calendar from "../pages/Calendar.jsx";
-import PlantIdentifier from "../components/PlantIdentifier.jsx";
-import PlantsLibrary from "../pages/PlantsLibrary.jsx";
-import PlantConsultantAI from "../pages/PlantConsultantAi.jsx";
-import Profile from "../pages/Profile.jsx";
-import Settings from "../pages/Settings.jsx";
-import Jardin from "../assets/jardin.jpg";
-import Login from "../pages/Login.jsx";
-import Registro from "../pages/Register.jsx";
-import Recuperacion from "../components/Recuperacion.jsx";
+import { Home, NotFound, Garden, Calendar, PlantIdentifier, PlantsLibrary, PlantConsultantAI, Profile, Settings } from "../pages/";
+import { Login, Registro } from "../pages/";
 import BottomNav from "../components/BottomNav.jsx";
 import ProtectedRoute from "../components/ProtectedRoute.jsx";
+import Jardin from "../assets/jardin.jpg";
 
 import "../models/App.css"
 
@@ -59,9 +48,6 @@ function App() {
         />
         <Route path="/registrar" 
         element={<Registro />} 
-        />
-        <Route path="/recuperacion" 
-        element={<Recuperacion />} 
         />
         <Route path="*"
           element={ <ProtectedRoute> <> <NotFound /> <BottomNav /> </> </ProtectedRoute> }

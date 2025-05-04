@@ -8,7 +8,7 @@ const titles = {
   "/huerta": "Tus plantas",
   "/calendario": "Calendario de riego",
   "/camara": "Análisis de plantas",
-  "/biblioteca": "Biblioteca botánica",
+  "/biblioteca": "🌿 Botánica",
   "/consultor": "Asistente virtual",
   "/perfil": "Perfil",
   "/settings": "Configuración",

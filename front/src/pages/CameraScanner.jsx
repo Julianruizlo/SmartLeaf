@@ -1,14 +1,11 @@
 import React from 'react';
 import "../App.css"
-import { ButtonPerfil, BackButton, SettingsButton } from '../Elementos';
+import { PageHead } from '../components/';
 
 function CameraScanner() {
   return (
     <div>
-      <BackButton/>
-      <h2>Escanear Planta</h2>
-      <SettingsButton/>
-      <ButtonPerfil/>
+      <PageHead />  
       
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { identifyPlant } from '../services/plantIdAPI'
 //import axios from 'axios';
-import PlantCard from '../components/PlantCard'; 
+import { PlantCard, PageHead } from '../components/'; 
 import '../models/Garden.css';
 import "../models/calendar.css"
 
@@ -33,7 +33,7 @@ const Garden = () => {
 
   return (
     <div className="app">
-      <h1>Mis plantas</h1>
+      <PageHead />
       <div className="plant-list">
         {plants.map((plant, index) => (
           <PlantCard key={index} {...plant} />

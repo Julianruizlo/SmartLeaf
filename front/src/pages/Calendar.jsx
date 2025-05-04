@@ -2,6 +2,7 @@ import React from 'react';
 import { ButtonPerfil, BackButton, SettingsButton } from '../components';
 import { Link } from 'react-router-dom';
 import "../models/Calendar.css"
+import { PageHead } from '../components/';
 
 
 function Calendar() {
@@ -21,13 +22,7 @@ function Calendar() {
 
   return (
     <div className="calendar-container">
-      <header className="calendar-header">
-        <BackButton/>
-        <h2>Calendario</h2>
-        <SettingsButton/>
-        <ButtonPerfil/>
-
-      </header>
+        <PageHead />
 
       <div className="calendar-month">
         <p>{`${currentMonth} ${currentYear}`}</p>

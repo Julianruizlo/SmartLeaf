@@ -1,6 +1,6 @@
 import React from 'react';
-import { ButtonPerfil, BackButton, SettingsButton } from '../components';
 import '../models/PlantLibrary.css';
+import { PageHead } from '../components/';
 
 const plantSections = [
   {
@@ -33,15 +33,12 @@ function PlantLibrary() {
   return (
     <div>
       <div className="library-container">
-        <BackButton />
-        <h2 className="library-title">🌿 Botánica</h2>
+        <PageHead />
         <input
           type="text"
           placeholder="Buscar plantas, frutas, flores..."
           className="search-bar"
         />
-        <SettingsButton />
-        <ButtonPerfil />
       </div>
 
       {plantSections.map((section, idx) => (

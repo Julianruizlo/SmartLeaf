@@ -1,18 +1,21 @@
 .app-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
   padding: 0.5rem 1rem;
   background-color: transparent;
-  box-shadow: none; 
+  box-shadow: none;
   height: 50px;
   position: relative;
+  margin-bottom: 1rem;
 }
 
-.page-title {
-  flex: 1;        
+.header-title {
+  flex: 1; 
   text-align: center;
   font-size: 1.125rem; 
-  font-weight: 600;    
-  line-height: 1.25rem;
+  font-weight: 600; 
+  line-height: 50px; 
+  margin: 0;
 }
+

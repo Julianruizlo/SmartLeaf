@@ -12,7 +12,7 @@ class Home extends Component {
                 <div className="app">
                     <PageHead />
                     <main className="main">
-                        <h2>Gestión personalizada del jardín</h2>
+                        <h2 className='home-title'>¡Bienvenido!</h2>
                         <HomeCard 
                             nombre="Tus plantas" descripcion="Ver todas las plantas que tienes en tu jardín" link="/huerta" src1={JardinImage} />
                         <HomeCard 
