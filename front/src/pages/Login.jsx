@@ -18,18 +18,21 @@ import Cookies from 'js-cookie';
    const navigate = useNavigate();
  
    const handleSubmit = async (e) => {
-     e.preventDefault();
-     setError("");
- 
-     try {
-       const token = await login(email, password);
-       saveToken(token);
-       alert("Login exitoso");
-       navigate('/home');
-     } catch {
-       setError("Credenciales incorrectas");
-     }
-   };
+    e.preventDefault();
+    setError("");
+  
+    try {
+      const token = await login(email, password);
+      saveToken(token);
+      if (token) {
+        navigate('/home');
+      } else {
+        setError("Error al guardar el token. Intente nuevamente.");
+      }
+    } catch (error) {
+      setError("Credenciales incorrectas");
+    }
+  };
 
   return (
     <div className="login-container">
