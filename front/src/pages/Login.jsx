@@ -1,48 +1,50 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { login } from '../services/authService';
+import { saveToken } from '../utils/token';
 import '../models/Login.css';
 import Cookies from 'js-cookie';
 
-function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const navigate = useNavigate();
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    if (username === 'admin' && password === '1234') {
-      const userData = { username: 'admin', token: 'tokenDeAutenticacion' };
-      Cookies.set('userData', JSON.stringify(userData), { path: '/' });
-      navigate('/home'); 
-    } else {
-      setError('Usuario o contraseña incorrectos');
-    }
-  };
+ function Login() {
+   const [email, setEmail] = useState("");
+   const [password, setPassword] = useState("");
+   const [error, setError] = useState("");
+ 
+   const navigate = useNavigate();
+ 
+   const handleSubmit = async (e) => {
+     e.preventDefault();
+     setError("");
+ 
+     try {
+       const token = await login(email, password);
+       saveToken(token);
+       alert("Login exitoso");
+       navigate('/home');
+     } catch {
+       setError("Credenciales incorrectas");
+     }
+   };
 
   return (
     <div className="login-container">
       <h1 className="login-title">¡Bienvenido!</h1>
-      <form className="login-form" onSubmit={handleLogin}>
+      <form className="login-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="username"></label>
+          <label htmlFor="email"></label>
           <input
             type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="Ingresa tu usuario"
-            required/>
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+        placeholder="Correo electrónico"
+        required/>
         </div>
         <div className="form-group">
           <label htmlFor="password"></label>
-          <input
-            type="password"
-            id="password"
+          <input type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Ingresa tu contraseña"
+            placeholder="Ingrese su contraseña"
             required/>
           <h3 className="login-subtitle">
             <button
