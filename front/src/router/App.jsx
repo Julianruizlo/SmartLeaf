@@ -5,7 +5,7 @@ import { Login, Registro } from "../pages/";
 import BottomNav from "../components/BottomNav.jsx";
 import ProtectedRoute from "../components/ProtectedRoute.jsx";
 import Jardin from "../assets/jardin.jpg";
-import { getToken } from "./utils/token";
+import { getToken } from "../utils/token.js";
 
 import "../models/App.css"
 

@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { login } from '../services/authService';
+import { login } from '../services/authServices.js';
 import { saveToken } from '../utils/token';
 import '../models/Login.css';
 import Cookies from 'js-cookie';
 
  function Login() {
+
+  /*
+  new User { Email = "admin@admin.com", Password = "admin", Role = "Admin" },
+            new User { Email = "user@example.com", Password = "password", Role = "User" }
+  */
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
    const [error, setError] = useState("");
