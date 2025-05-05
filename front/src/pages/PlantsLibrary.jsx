@@ -1,12 +1,13 @@
 import React from 'react';
 import '../models/PlantLibrary.css';
 import { PageHead } from '../components/';
+import { Cilantro, Jazmin, Tomate, Albahaca} from '../assets/';
 
 const plantSections = [
   {
     title: 'Plantas populares',
     items: [
-      { name: 'Jazmín', image: '/images/jazmin.jpg' },
+      { name: 'Jazmín', image: {Jazmin} },
       { name: 'Lavanda', image: '/images/lavanda.jpg' },
       { name: 'Orquídea', image: '/images/orquidea.jpg' },
     ],
@@ -31,7 +32,7 @@ const plantSections = [
 
 function PlantLibrary() {
   return (
-    <div>
+    <div className="app">
       <div className="library-container">
         <PageHead />
         <input
@@ -44,11 +45,11 @@ function PlantLibrary() {
       {plantSections.map((section, idx) => (
         <div key={idx} className="section">
           <h3 className="section-title">{section.title}</h3>
-          <div className="card-grid">
+          <div className="plant-list-lib">
             {section.items.map((item, i) => (
-              <div key={i} className="plant-card">
-                <img src={item.image} alt={item.name} className="plant-image" />
-                <p className="plant-name">{item.name}</p>
+              <div key={i} className="plant-card-lib">
+                <img src={item.image} alt={item.name} className="plant-image-lib" />
+                <p className="plant-name-lib">{item.name}</p>
               </div>
             ))}
           </div>

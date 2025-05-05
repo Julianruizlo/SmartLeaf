@@ -1,5 +1,4 @@
 import React from 'react';
-import { ButtonPerfil, BackButton, SettingsButton } from '../components';
 import { Link } from 'react-router-dom';
 import "../models/Calendar.css"
 import { PageHead } from '../components/';

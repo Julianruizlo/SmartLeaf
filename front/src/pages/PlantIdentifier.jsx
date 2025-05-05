@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { identifyPlant } from '../services/plantIdAPI';
-import { PageHead } from '../components/';
+import { PageHead } from '../components';
+import '../models/PlantIdentifier.css'; 
 
 const PlantIdentifier = () => {
   const [image, setImage] = useState(null);
@@ -13,82 +14,62 @@ const PlantIdentifier = () => {
 
     const reader = new FileReader();
     reader.onloadend = () => {
-      const base64String = reader.result.replace('data:', '').replace(/^.+,/, '');
-      setImage(base64String);
+      setImage(reader.result.split(',')[1]);
     };
     reader.readAsDataURL(file);
   };
 
   const handleIdentify = async () => {
-    if (!image) {
-      alert("Por favor, sube una imagen antes de identificar.");
-      return;
-    }
+    if (!image) return alert("Por favor, sube una imagen antes de identificar.");
 
     setLoading(true);
     try {
       const data = await identifyPlant(image);
       setResult(data);
-    } catch (error) {
-      console.error("Error al identificar la planta:", error);
-      alert('Hubo un error al identificar la planta. Por favor, intenta nuevamente.');
+    } catch (err) {
+      console.error("Error al identificar la planta:", err);
+      alert('Hubo un error al identificar la planta. Intenta nuevamente.');
     } finally {
       setLoading(false);
     }
   };
 
+  const suggestion = result?.suggestions?.[0];
+  const details = suggestion?.plant_details;
+
   return (
-    <div className="plant-identifier-container">
+    <div className="app">
       <PageHead />
-      <div className="upload-section">
-        <input
-          type="file"
-          accept="image/*"
-          onChange={handleImageUpload}
-          className="upload-input"
-        />
+
+      <div className="plant-id-header-image">
+        <img src="../assets/Analizador.jpg" alt="Encabezado" />
+      </div>
+
+      <div className="plant-id-guide-text">
+        <p>Por favor, toma una fotografía de tu planta o carga una imagen para 
+          que podamos analizarla.</p>
+      </div>
+
+      <div className="plant-id-upload">
+        <input type="file" accept="image/*" onChange={handleImageUpload} />
       </div>
 
       {image && (
-        <div className="preview-section">
-          <img
-            src={`data:image/jpeg;base64,${image}`}
-            alt="Preview"
-            className="preview-image"
-          />
-          <button
-            onClick={handleIdentify}
-            disabled={loading}
-            className="identify-button"
-          >
-            {loading ? 'Identificando...' : 'Identificar Planta'}
+        <div className="plant-id-preview">
+          <img src={`data:image/jpeg;base64,${image}`} alt="Preview" />
+          <button onClick={handleIdentify} disabled={loading}>
+            {loading ? 'Identificando...' : 'Identificar planta'}
           </button>
         </div>
       )}
 
       {result && (
-        <div className="result-section">
+        <div className="plant-id-result">
           <h3>Resultado:</h3>
-          <p>
-            <strong>Nombre común:</strong>{' '}
-            {result.suggestions?.[0]?.plant_details?.common_names?.join(', ') || 'No disponible'}
-          </p>
-          <p>
-            <strong>Nombre científico:</strong>{' '}
-            {result.suggestions?.[0]?.plant_name || 'No disponible'}
-          </p>
-          <p>
-            <strong>Descripción:</strong>{' '}
-            {result.suggestions?.[0]?.plant_details?.wiki_description?.value || 'No disponible'}
-          </p>
-          <a
-            href={result.suggestions?.[0]?.plant_details?.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="more-info-link"
-          >
-            Más info
-          </a>
+          <p><strong>Nombre común:</strong> {details?.common_names?.join(', ') || 'No disponible'}</p>
+          <p><strong>Nombre científico:</strong> {suggestion?.plant_name || 'No disponible'}</p>
+          <p><strong>Descripción:</strong> {details?.wiki_description?.value || 'No disponible'}</p>
+          <a href={details?.url} target="_blank" rel="noopener noreferrer">Más info</a>
         </div>
       )}
     </div>

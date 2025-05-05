@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { Home, NotFound, Garden, Calendar, PlantIdentifier, PlantsLibrary, PlantConsultantAI, Profile, Settings } from "../pages/";
 import { Login, Registro } from "../pages/";
 import BottomNav from "../components/BottomNav.jsx";
-import Jardin from "../assets/jardin.jpg";
 import { getToken } from "../utils/token.js";
 
 import "../models/App.css";
@@ -59,10 +58,6 @@ function App() {
         <Route 
           path="/settings"
           element={<PrivateRoute element={<> <Settings /> <BottomNav /> </>} />} 
-        />
-        <Route 
-          path="/jardin"
-          element={<PrivateRoute element={<> <Jardin /> <BottomNav /> </>} />}
         />
         <Route 
           path="/registrar" 
