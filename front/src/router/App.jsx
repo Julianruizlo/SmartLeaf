@@ -29,35 +29,39 @@ function App() {
         />
         <Route 
           path="/home" 
-          element={<PrivateRoute element={<Home />} />} 
+          element={<ProtectedRoute> <Home /> </ProtectedRoute>} 
         />
         <Route 
           path="/huerta" 
-          element={<PrivateRoute element={<> <Garden /> <BottomNav /> </>} />} 
+          element={<ProtectedRoute> <> <Garden /> <BottomNav /> </> </ProtectedRoute>} 
         />
         <Route 
           path="/calendario" 
-          element={<PrivateRoute element={<> <Calendar /> <BottomNav /> </>} />} 
+          element={<ProtectedRoute> <> <Calendar /> <BottomNav /> </> </ProtectedRoute>} 
         />
         <Route 
           path="/camara"
-          element={<PrivateRoute element={<> <PlantIdentifier /> <BottomNav /> </>} />} 
+          element={<ProtectedRoute> <> <PlantIdentifier /> <BottomNav /> </> </ProtectedRoute>} 
         />
         <Route 
           path="/biblioteca"
-          element={<PrivateRoute element={<> <PlantsLibrary /> <BottomNav /> </>} />} 
+          element={<ProtectedRoute> <> <PlantsLibrary /> <BottomNav /> </> </ProtectedRoute>} 
         />
         <Route 
           path="/consultor"
-          element={<PrivateRoute element={<> <PlantConsultantAI /> <BottomNav /> </>} />} 
+          element={<ProtectedRoute> <> <PlantConsultantAI /> <BottomNav /> </> </ProtectedRoute>} 
         />
         <Route 
           path="/perfil"
-          element={<PrivateRoute element={<> <Profile /> <BottomNav /> </>} />} 
+          element={<ProtectedRoute> <> <Profile /> <BottomNav /> </> </ProtectedRoute>} 
         />
         <Route 
           path="/settings"
-          element={<PrivateRoute element={<> <Settings /> <BottomNav /> </>} />} 
+          element={<ProtectedRoute> <> <Settings /> <BottomNav /> </> </ProtectedRoute>} 
+        />
+        <Route 
+          path="/jardin"
+          element={<ProtectedRoute> <> <Jardin /> <BottomNav /> </> </ProtectedRoute>}
         />
         <Route 
           path="/registrar" 
@@ -65,7 +69,7 @@ function App() {
         />
         <Route 
           path="*"
-          element={<PrivateRoute element={<> <NotFound /> <BottomNav /> </>} />} 
+          element={<ProtectedRoute> <> <NotFound /> <BottomNav /> </> </ProtectedRoute>} 
         />
       </Routes>
     </Router>

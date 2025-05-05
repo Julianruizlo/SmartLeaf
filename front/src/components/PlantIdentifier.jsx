@@ -1,4 +1,3 @@
-// src/components/PlantIdentifier.jsx
 import React, { useState } from 'react';
 import { identifyPlant } from '../services/plantIdAPI';
 

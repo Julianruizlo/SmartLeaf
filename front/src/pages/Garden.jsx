@@ -10,18 +10,28 @@ const Garden = () => {
 
   useEffect(() => {
     const fetchPlants = async () => {
-      const plantNames = ['Cilantro', 'Pimientos', 'Tomates', 'Lechuga', 'Albahaca', 'Fresas'];
-      const plantActions = ['¡Regar!', '¡Cosechar!', '¡Regar!', '¡Cosechar!', '¡Regar!', '¡Regar!'];
+      try {
+        const plantNames = ['Cilantro', 'Pimientos', 'Tomates', 'Lechuga', 'Albahaca', 'Fresas'];
+        const plantActions = ['¡Regar!', '¡Cosechar!', '¡Regar!', '¡Cosechar!', '¡Regar!', '¡Regar!'];
 
-      const promises = plantNames.map(async (name, index) => {
-        const imageBase64 = `data:image/jpeg;base64,${name}`;
-        const response = await identifyPlant(imageBase64);
-        const imageUrl = response.suggestions[0].plant_details.url;
-        return { name, image: imageUrl, status: plantActions[index] };
-      });
+        const promises = plantNames.map(async (name, index) => {
+          const imageBase64 = `data:image/jpeg;base64,VALID_IMAGE_DATA`;
+          const response = await identifyPlant(imageBase64);
 
-      const plantData = await Promise.all(promises);
-      setPlants(plantData);
+          if (!response || !response.suggestions || !response.suggestions[0]) {
+            console.error(`No se encontraron sugerencias para ${name}`);
+            return { name, image: '', status: plantActions[index] };
+          }
+
+          const imageUrl = response.suggestions[0].plant_details.url;
+          return { name, image: imageUrl, status: plantActions[index] };
+        });
+
+        const plantData = await Promise.all(promises);
+        setPlants(plantData);
+      } catch (error) {
+        console.error('Error al obtener las plantas:', error);
+      }
     };
 
     fetchPlants();
