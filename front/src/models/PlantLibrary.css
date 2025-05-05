@@ -40,7 +40,7 @@
     gap: 12px;
   }
   
-  .plant-card {
+  /*.plant-card {
     width: 110px;
     height: 130px;
     background-color: #fff;
@@ -58,7 +58,7 @@
     width: 100%;
     height: 90px;
     object-fit: cover;
-  }
+  }*/
   
   .plant-name {
     padding: 6px;

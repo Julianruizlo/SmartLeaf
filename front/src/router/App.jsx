@@ -3,11 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { Home, NotFound, Garden, Calendar, PlantIdentifier, PlantsLibrary, PlantConsultantAI, Profile, Settings } from "../pages/";
 import { Login, Registro } from "../pages/";
 import BottomNav from "../components/BottomNav.jsx";
-import ProtectedRoute from "../components/ProtectedRoute.jsx";
 import Jardin from "../assets/jardin.jpg";
 import { getToken } from "../utils/token.js";
 
-import "../models/App.css"
+import "../models/App.css";
 
 function PrivateRoute({ element }) {
   const token = getToken();
@@ -31,39 +30,39 @@ function App() {
         />
         <Route 
           path="/home" 
-          element={<ProtectedRoute> <Home /> </ProtectedRoute>} 
+          element={<PrivateRoute element={<Home />} />} 
         />
         <Route 
           path="/huerta" 
-          element={<ProtectedRoute> <> <Garden /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<PrivateRoute element={<> <Garden /> <BottomNav /> </>} />} 
         />
         <Route 
           path="/calendario" 
-          element={<ProtectedRoute> <> <Calendar /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<PrivateRoute element={<> <Calendar /> <BottomNav /> </>} />} 
         />
         <Route 
           path="/camara"
-          element={<ProtectedRoute> <> <PlantIdentifier /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<PrivateRoute element={<> <PlantIdentifier /> <BottomNav /> </>} />} 
         />
         <Route 
           path="/biblioteca"
-          element={<ProtectedRoute> <> <PlantsLibrary /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<PrivateRoute element={<> <PlantsLibrary /> <BottomNav /> </>} />} 
         />
         <Route 
           path="/consultor"
-          element={<ProtectedRoute> <> <PlantConsultantAI /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<PrivateRoute element={<> <PlantConsultantAI /> <BottomNav /> </>} />} 
         />
         <Route 
           path="/perfil"
-          element={<ProtectedRoute> <> <Profile /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<PrivateRoute element={<> <Profile /> <BottomNav /> </>} />} 
         />
         <Route 
           path="/settings"
-          element={<ProtectedRoute> <> <Settings /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<PrivateRoute element={<> <Settings /> <BottomNav /> </>} />} 
         />
         <Route 
           path="/jardin"
-          element={<ProtectedRoute> <> <Jardin /> <BottomNav /> </> </ProtectedRoute>}
+          element={<PrivateRoute element={<> <Jardin /> <BottomNav /> </>} />}
         />
         <Route 
           path="/registrar" 
@@ -71,7 +70,7 @@ function App() {
         />
         <Route 
           path="*"
-          element={<ProtectedRoute> <> <NotFound /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<PrivateRoute element={<> <NotFound /> <BottomNav /> </>} />} 
         />
       </Routes>
     </Router>

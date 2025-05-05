@@ -11,16 +11,12 @@
   justify-content: center; /* Centra las tarjetas horizontalmente */
   margin-bottom: 20px;
 }
-
 .plant-card {
-  background-color: #ffffff; /* Fondo blanco */
-  border-radius: 12px; /* Bordes redondeados */
+  border-radius: 12px;
   overflow: hidden;
-  width: 140px;
-  padding: 0.5rem;
+  width: 170px;
+  padding: 0;
   cursor: pointer;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -30,32 +26,32 @@
 }
 
 .plant-image {
-  width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
-  height: 120px; /* Altura fija para la imagen */
-  object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
-  border-radius: 8px;
+  width: 170px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 0;
 }
 
 .plant-name {
-  margin: 0.5rem 0 0.25rem;
+  margin: 0 0 0 0.2rem;
   font-size: 1rem;
   font-weight: 600;
   color: #333;
-  text-align: center; /* Centra el texto */
+  text-align: left;
 }
 
 .plant-status {
-  margin: 0;
+  margin: 0rem 0 0.25rem 0.3rem;
   font-size: 0.9rem;
-  color: #888; /* Color gris para el estado */
-  text-align: center; /* Centra el texto */
+  color: #888;
+  text-align: left;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
   gap: 10px; /* Espaciado entre los botones */
-  margin-top: 20px;
 }
 
 .add-button {

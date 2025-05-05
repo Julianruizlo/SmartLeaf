@@ -1,13 +1,14 @@
 .app-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   padding: 0.5rem 1rem;
   background-color: transparent;
   box-shadow: none;
   height: 50px;
   position: relative;
   margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header-title {
@@ -16,6 +17,6 @@
   font-size: 1.125rem; 
   font-weight: 600; 
   line-height: 50px; 
-  margin: 0;
+  padding: 20px;
 }
 
