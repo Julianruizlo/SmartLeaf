@@ -150,3 +150,6 @@ C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\
 C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.pdb
 C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
 C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\ref\backend.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll

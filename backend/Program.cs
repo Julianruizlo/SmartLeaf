@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Text;
 using data.API; // Asegúrate de que la ruta sea correcta
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Leer configuración del archivo appsettings.json
@@ -19,6 +20,8 @@ builder.Services.AddAuthentication(options =>
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
+
+
 .AddJwtBearer(options =>
 {
     options.RequireHttpsMetadata = false; // poner true en producción
@@ -32,6 +35,9 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtKey))
     };
 });
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 // 2. Registrar servicios necesarios
 builder.Services.AddHttpClient<PlantIdService>();
@@ -48,6 +54,12 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<SmartLeaf.Services.AuthService>();
 
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 // 4. Configurar middlewares
 app.UseHttpsRedirection();
