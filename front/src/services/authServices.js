@@ -1,4 +1,6 @@
-const API_URL = "http://localhost:5085/api/auth/login"; // Cambiar si usás otro puerto/backend
+const API_URL = "http://localhost:5085/api/auth/login";// Cambiar si usás otro puerto/backend
+
+import Cookies from 'js-cookie';
 
 export async function login(email, password) {
   const response = await fetch(API_URL, {
@@ -14,5 +16,6 @@ export async function login(email, password) {
   }
 
   const data = await response.json();
-  return data.token; // El backend debe devolver un objeto: { token: "..." }
+  Cookies.set('userData', JSON.stringify(data.userData)); // Guarda los datos del usuario en las cookies
+  return data.token; // Devuelve el token
 }

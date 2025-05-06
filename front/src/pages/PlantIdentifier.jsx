@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { identifyPlant } from '../services/plantIdAPI';
+import { Camera } from '../assets/';
 import { PageHead } from '../components';
 import '../models/PlantIdentifier.css'; 
 
@@ -40,9 +41,8 @@ const PlantIdentifier = () => {
   return (
     <div className="app">
       <PageHead />
-
-      <div className="plant-id-header-image">
-        <img src="../assets/Analizador.jpg" alt="Encabezado" />
+      <div class="plant-id-header-container">
+        <img class="plant-id-header-image" src={Camera} alt="Encabezado"/>
       </div>
 
       <div className="plant-id-guide-text">

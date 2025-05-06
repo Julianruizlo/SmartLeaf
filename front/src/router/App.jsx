@@ -2,15 +2,9 @@ import { React, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Home, NotFound, Garden, Calendar, PlantIdentifier, PlantsLibrary, PlantConsultantAI, Profile, Settings } from "../pages/";
 import { Login, Registro } from "../pages/";
-import BottomNav from "../components/BottomNav.jsx";
-import { getToken } from "../utils/token.js";
-
+import { getToken } from "../utils/token";
+import { AuthRoute, BottomNav } from "../components/";
 import "../models/App.css";
-
-function PrivateRoute({ element }) {
-  const token = getToken();
-  return token ? element : <Navigate to="/" />;
-}
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -19,49 +13,49 @@ function App() {
     const token = getToken();
     setIsAuthenticated(!!token);
   }, []);
-
+  console.log("isAuthenticated:", isAuthenticated); // Depuración
   return (
     <Router>
       <Routes>
+      <Route 
+          path="/login" 
+          element={ <Login />} 
+        />
         <Route 
           path="/" 
-          element={isAuthenticated ? <Navigate to="/home" /> : <Login />} 
+          element={isAuthenticated ? <Navigate to="/home" /> : <Navigate to= "/login" />} 
         />
         <Route 
           path="/home" 
-          element={<ProtectedRoute> <Home /> </ProtectedRoute>} 
+          element={<AuthRoute> <Home /> </AuthRoute>} 
         />
         <Route 
           path="/huerta" 
-          element={<ProtectedRoute> <> <Garden /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<AuthRoute> <> <Garden /> <BottomNav /> </> </AuthRoute>} 
         />
         <Route 
           path="/calendario" 
-          element={<ProtectedRoute> <> <Calendar /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<AuthRoute> <> <Calendar /> <BottomNav /> </> </AuthRoute>} 
         />
         <Route 
           path="/camara"
-          element={<ProtectedRoute> <> <PlantIdentifier /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<AuthRoute> <> <PlantIdentifier /> <BottomNav /> </> </AuthRoute>} 
         />
         <Route 
           path="/biblioteca"
-          element={<ProtectedRoute> <> <PlantsLibrary /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<AuthRoute> <> <PlantsLibrary /> <BottomNav /> </> </AuthRoute>} 
         />
         <Route 
           path="/consultor"
-          element={<ProtectedRoute> <> <PlantConsultantAI /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<AuthRoute> <> <PlantConsultantAI /> <BottomNav /> </> </AuthRoute>} 
         />
         <Route 
           path="/perfil"
-          element={<ProtectedRoute> <> <Profile /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<AuthRoute> <> <Profile /> <BottomNav /> </> </AuthRoute>} 
         />
         <Route 
           path="/settings"
-          element={<ProtectedRoute> <> <Settings /> <BottomNav /> </> </ProtectedRoute>} 
-        />
-        <Route 
-          path="/jardin"
-          element={<ProtectedRoute> <> <Jardin /> <BottomNav /> </> </ProtectedRoute>}
+          element={<AuthRoute> <> <Settings /> <BottomNav /> </> </AuthRoute>} 
         />
         <Route 
           path="/registrar" 
@@ -69,7 +63,7 @@ function App() {
         />
         <Route 
           path="*"
-          element={<ProtectedRoute> <> <NotFound /> <BottomNav /> </> </ProtectedRoute>} 
+          element={<AuthRoute> <> <NotFound /> <BottomNav /> </> </AuthRoute>} 
         />
       </Routes>
     </Router>
