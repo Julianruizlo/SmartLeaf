@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5085/api/auth/login";// Cambiar si usás otro puerto/backend
+const API_URL = "http://localhost:5085/api/auth/login";// Puerto ENDPOINT DEL BACKEND
 
 import Cookies from 'js-cookie';
 

@@ -1,0 +1,5 @@
+El endpoint del chatbot posee una apikey distinta 
+al endpoint del identify plant
+
+la apikey que esta puesta dentro del identify es de mariano
+la que esta en el chatbot es de luciano
