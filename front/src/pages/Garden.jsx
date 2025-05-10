@@ -1,43 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { identifyPlant } from '../services/plantIdAPI';
-import { PlantCard, PageHead } from '../components/';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { PlantCard, PageHead,PlantContext } from '../components/';
 import { Cilantro, Tomate, Albahaca } from '../assets';
+
+
 import '../models/Garden.css';
 import "../models/calendar.css";
 
 const Garden = () => {
-  const [plants, setPlants] = useState([]);
+  const { plants } = useContext(PlantContext); 
 
-  useEffect(() => {
-    const fetchPlants = async () => {
-      try {
-        const plantNames = ['Cilantro', 'Pimientos', 'Tomates', 'Lechuga', 'Albahaca', 'Fresas'];
-        const plantActions = ['¡Regar!', '¡Cosechar!', '¡Regar!', '¡Cosechar!', '¡Regar!', '¡Regar!'];
-
-        const promises = plantNames.map(async (name, index) => {
-          const imageBase64 = `data:image/jpeg;base64,VALID_IMAGE_DATA`;
-          const response = await identifyPlant(imageBase64);
-
-          if (!response || !response.suggestions || !response.suggestions[0]) {
-            console.error(`No se encontraron sugerencias para ${name}`);
-            return { name, image: '', status: plantActions[index] };
-          }
-
-          const imageUrl = response.suggestions[0].plant_details.url;
-          return { name, image: imageUrl, status: plantActions[index] };
-        });
-
-        const plantData = await Promise.all(promises);
-        setPlants(plantData);
-      } catch (error) {
-        console.error('Error al obtener las plantas:', error);
-      }
-    };
-
-    fetchPlants();
-  }, []);
-
-  // Ejemplos estáticos de PlantCard
+  
   const examplePlants = [
     { name: 'Cilantro', status: '¡Regar!', image: Cilantro },
     { name: 'Tomates', status: '¡Cosechar!', image: Tomate },
@@ -47,16 +20,21 @@ const Garden = () => {
   return (
     <div className="app">
       <PageHead />
+
       <div className="plant-list">
+       
         {plants.map((plant, index) => (
-          <PlantCard key={index} {...plant} />
+          <PlantCard key={`added-${index}`} {...plant} />
         ))}
+
+       
         {examplePlants.map((plant, index) => (
           <PlantCard key={`example-${index}`} {...plant} />
         ))}
       </div>
+
       <div className="buttons">
-        <button className="add-button">Agregar planta</button>
+        <Link to="/agregar" className="add-button">Agregar planta</Link>
         <button className="edit-button">Editar</button>
       </div>
     </div>
@@ -64,3 +42,4 @@ const Garden = () => {
 };
 
 export default Garden;
+

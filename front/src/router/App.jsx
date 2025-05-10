@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { Home, NotFound, Garden, Calendar, PlantIdentifier, PlantsLibrary, PlantConsultantAI, Profile, Settings } from "../pages/";
+import { Home, NotFound, Garden, Calendar, PlantIdentifier, PlantsLibrary, PlantConsultantAI, Profile, Settings, AddPlant, PlantDetail } from "../pages/";
 import { Login, Registro } from "../pages/";
 import { getToken } from "../utils/token";
 import { AuthRoute, BottomNav } from "../components/";
@@ -64,6 +64,14 @@ function App() {
         <Route 
           path="*"
           element={<AuthRoute> <> <NotFound /> <BottomNav /> </> </AuthRoute>} 
+        />
+        <Route 
+          path="/agregar"
+          element={<AuthRoute> <> <AddPlant /> <BottomNav /> </> </AuthRoute>} 
+        />
+        <Route 
+          path="/descripcion"
+          element={<AuthRoute> <> <PlantDetail /> <BottomNav /> </> </AuthRoute>} 
         />
       </Routes>
     </Router>
