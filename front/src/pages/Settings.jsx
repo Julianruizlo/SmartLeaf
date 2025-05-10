@@ -1,13 +1,11 @@
-import React from 'react';
-import { ButtonPerfil, BackButton } from '../components';
-import "../models/App.css"
+import React from "react";
+import { PageHead } from "../components";
+import "../models/App.css";
 
 function Settings() {
   return (
     <div className="settings-container">
-      <BackButton/>
-      <h2>Configuraciones</h2>
-      <ButtonPerfil/>
+      <PageHead />
       <div className="settings-option">
         <label htmlFor="language">Idioma:</label>
         <select id="language" name="language">

@@ -1,14 +1,12 @@
-import React from 'react';
-import { BackButton, SettingsButton } from '../components';
-import "../models/App.css"
+import React from "react";
+import { PageHead } from "../components";
+import "../models/App.css";
 
 function Profile() {
   return (
     <div>
       <header className="calendar-header">
-        <BackButton/>
-        <h1>Mi Perfil</h1>
-        <SettingsButton/>
+        <PageHead />
       </header>
       <div className="perfil-container">
         <h2>Nombre de Usuario</h2>

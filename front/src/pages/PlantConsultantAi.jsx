@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import "../models/Chatbot.css"
-import { ButtonPerfil, BackButton, SettingsButton } from '../components';
+import { Dropdown } from '../components';
 
 
 function PlantConsultantAI() {

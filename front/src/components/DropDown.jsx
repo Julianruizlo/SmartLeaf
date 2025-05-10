@@ -5,7 +5,7 @@ import {
   dropdown_item_list,
   active,
   item_list,
-} from "./dropdown.module.css";
+} from "../models/DropDown.module.css";
 
 function Dropdown({ dropdownTitle }) {
   const activatorRef = useRef(null);
@@ -14,9 +14,8 @@ function Dropdown({ dropdownTitle }) {
 
   // Define la colección fija de elementos aquí
   const items = [
-    { slug: "/link1", anchor: "Nombre 1" },
-    { slug: "/link2", anchor: "Nombre 2" },
-    { slug: "/link3", anchor: "Nombre 3" },
+        { anchor: "Configuración ⚙️", slug: "/settings" },
+        { anchor: "Mi Perfil 👤",  slug: "/perfil" },
   ];
 
   const clickHandler = () => {

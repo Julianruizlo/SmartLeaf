@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { ButtonPerfil, SettingsButton, BackButton} from "./";
+import { BackButton, Dropdown} from "./";
 import  "../models/PageHeader.css"
 
 const titles = {
@@ -25,8 +25,7 @@ function PageHead() {
     <header className="app-header">
       <BackButton />
       <h1 className="header-title">{pageTitle}</h1>
-      <SettingsButton />
-      <ButtonPerfil />
+      <Dropdown dropdownTitle="Menú" />
     </header>
   );
 };
