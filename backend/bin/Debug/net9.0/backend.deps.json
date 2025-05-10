@@ -10,7 +10,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.4",
           "Microsoft.AspNetCore.OpenApi": "9.0.4",
-          "System.IdentityModel.Tokens.Jwt": "8.9.0"
+          "System.IdentityModel.Tokens.Jwt": "8.9.0",
+          "Swashbuckle.AspNetCore": "8.1.1"
         },
         "runtime": {
           "backend.dll": {}

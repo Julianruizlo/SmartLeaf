@@ -199,6 +199,7 @@ C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\
 C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
 C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\ref\backend.dll
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\appsettings.json
 C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.staticwebassets.endpoints.json
@@ -245,6 +246,8 @@ C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debu
 C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
 C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\ref\backend.dll
 =======
+=======
+>>>>>>> 0146455aca53e54eaf664ec733afd0c017c54aab
 C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\appsettings.json
 C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\backend.staticwebassets.endpoints.json
@@ -290,4 +293,7 @@ C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\bac
 C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.pdb
 C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
 C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\ref\backend.dll
+<<<<<<< HEAD
+>>>>>>> 0146455aca53e54eaf664ec733afd0c017c54aab
+=======
 >>>>>>> 0146455aca53e54eaf664ec733afd0c017c54aab
