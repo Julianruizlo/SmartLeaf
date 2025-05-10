@@ -1,0 +1,245 @@
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\bin\Debug\net9.0\appsettings.json
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\bin\Debug\net9.0\backend.staticwebassets.endpoints.json
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\bin\Debug\net9.0\backend.exe
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\bin\Debug\net9.0\backend.deps.json
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\bin\Debug\net9.0\backend.runtimeconfig.json
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\bin\Debug\net9.0\backend.dll
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\bin\Debug\net9.0\backend.pdb
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.AssemblyReference.cache
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\backend.AssemblyInfoInputs.cache
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\backend.AssemblyInfo.cs
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.CoreCompileInputs.cache
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\backend.sourcelink.json
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\scopedcss\bundle\backend.styles.css
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.build.backend.props
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.backend.props
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.backend.props
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.Up2Date
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\backend.dll
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\refint\backend.dll
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\backend.pdb
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
+C:\Users\maria\Desktop\Facultad\Proyecto SEMINARIO\SmartLeaf\backend\obj\Debug\net9.0\ref\backend.dll
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\appsettings.json
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.staticwebassets.endpoints.json
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.exe
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.deps.json
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.runtimeconfig.json
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.dll
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.pdb
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.AssemblyReference.cache
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.AssemblyInfoInputs.cache
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.AssemblyInfo.cs
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.CoreCompileInputs.cache
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.sourcelink.json
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\scopedcss\bundle\backend.styles.css
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.build.backend.props
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.backend.props
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.backend.props
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.Up2Date
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.dll
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\refint\backend.dll
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.pdb
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
+C:\Users\maria\Desktop\bibloteca\Facultad\Proyecto SEMINARIO\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\ref\backend.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\appsettings.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.staticwebassets.endpoints.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.exe
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.deps.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.runtimeconfig.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.pdb
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.AssemblyReference.cache
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.AssemblyInfoInputs.cache
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.AssemblyInfo.cs
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.CoreCompileInputs.cache
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.sourcelink.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\scopedcss\bundle\backend.styles.css
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.build.backend.props
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.backend.props
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.backend.props
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.Up2Date
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\refint\backend.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.pdb
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\ref\backend.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\appsettings.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\backend.staticwebassets.endpoints.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\backend.exe
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\backend.deps.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\backend.runtimeconfig.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\backend.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\backend.pdb
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.AssemblyReference.cache
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.AssemblyInfoInputs.cache
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.AssemblyInfo.cs
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.CoreCompileInputs.cache
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.sourcelink.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\scopedcss\bundle\backend.styles.css
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.build.backend.props
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.backend.props
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.backend.props
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.Up2Date
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\refint\backend.dll
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.pdb
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
+C:\Users\lucia\OneDrive - frt.utn.edu.ar\3erA\Seminario\Aplicacion\SmartLeaf\backend\obj\Debug\net9.0\ref\backend.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\appsettings.json
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.staticwebassets.endpoints.json
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.exe
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.deps.json
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.runtimeconfig.json
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.pdb
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.AssemblyReference.cache
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.AssemblyInfoInputs.cache
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.AssemblyInfo.cs
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.CoreCompileInputs.cache
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.sourcelink.json
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\scopedcss\bundle\backend.styles.css
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.build.backend.props
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.backend.props
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.backend.props
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.Up2Date
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\refint\backend.dll
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.pdb
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
+C:\Users\facun\Desktop\Facultad\Seminario\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\ref\backend.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\appsettings.json
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.staticwebassets.endpoints.json
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.exe
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.deps.json
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.runtimeconfig.json
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\backend.pdb
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.AssemblyReference.cache
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.AssemblyInfoInputs.cache
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.AssemblyInfo.cs
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.CoreCompileInputs.cache
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.sourcelink.json
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\scopedcss\bundle\backend.styles.css
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.build.backend.props
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.backend.props
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.backend.props
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.csproj.Up2Date
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\refint\backend.dll
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.pdb
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
+C:\Users\Urano\Desktop\Facultad\Tercer Año\SmartLeaf\SmartLeaf\backend\obj\Debug\net9.0\ref\backend.dll
