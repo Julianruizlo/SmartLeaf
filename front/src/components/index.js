@@ -6,4 +6,5 @@ export { default as BottomNav } from './BottomNav';
 export { default as ProtectedRoute } from './ProtectedRoute';
 export { default as AuthRoute } from './AuthRoute';
 export { default as Dropdown } from './DropDown';
-export { default as PlantContext} from './PlantContext';
+export { default as PlantProvider } from './PlantProvider';
+export { PlantContext } from './PlantContext';

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
-import { PlantContext} from '../components/';
+import { PlantContext } from '../components/';
 import "../models/AddPlant.css";
 
 const AddPlant = () => {
@@ -10,6 +10,7 @@ const AddPlant = () => {
   console.log(useContext)
 
   const { addPlant } = useContext(PlantContext);
+  console.log(addPlant); // Esto debería mostrar la función `addPlant` si el contexto está funcionando.
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -20,7 +21,7 @@ const AddPlant = () => {
     addPlant(newPlant);
 
     
-    navigate("/huerta");
+    navigate("/garden");
   };
 
   return (

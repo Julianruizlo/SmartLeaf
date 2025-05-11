@@ -1,6 +1,5 @@
-import React, { createContext, useState } from 'react';
-
-export const PlantContext = createContext();
+import React, { useState } from 'react';
+import { PlantContext } from './PlantContext';
 
 function PlantProvider  ({ children })  {
   const [plants, setPlants] = useState([]);
