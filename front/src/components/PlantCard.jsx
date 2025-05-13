@@ -1,21 +1,31 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom"; // Importar Link
 import "../models/Garden.css";
 
 const statusColors = {
-  "¡Regar!": "#1c9c56", 
-  "¡Cosechar!": "#c4a000",
-  "": "#888"               
+  "¡Regar!": "#1c9c56",
+  "¡Cosechar!": "#215ead",
+  "Recién plantada": "#888",
 };
 
-const PlantCard = ({ name, image, status }) => {
+const PlantCard = ({ name = "Sin nombre", image = null, status = "Recién plantada" }) => {
   const ruta = `/planta/${name.toLowerCase()}`;
   return (
     <div className="plant-card">
-    <Link to={ruta}>
-        <img src={image} alt={name} className="plant-image" />
+      <Link to={ruta}>
+        <img
+          src={image} // Mostrar imagen predeterminada si no hay una específica
+          alt={name}
+          className="plant-image"
+        />
       </Link>
       <h3 className="plant-name">{name}</h3>
-      {status && <p className="plant-status" style={{ color: statusColors[status] || "#888" }}>{status}</p>}
+      <p
+        className="plant-status"
+        style={{ color: statusColors[status] || "#888" }} // Color según el estado
+      >
+        {status}
+      </p>
     </div>
   );
 };

@@ -9,5 +9,5 @@ export {default as Profile} from './Profile.jsx';
 export {default as Settings} from './Settings.jsx';
 export {default as Login} from './Login.jsx';
 export {default as Registro} from './Register.jsx';
-export { default as AddPlant } from "./AddPlant";
-export {default as PlantDetail } from "./AddPlant";
+export {default as AddPlant} from './AddPlant.jsx';
+export {default as PlantDetails} from './PlantDetails.jsx';
