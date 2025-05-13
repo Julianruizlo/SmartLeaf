@@ -5,8 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using System.Net.Http;
 using System.Text;
-using data.API; // Asegúrate de que la ruta sea correcta
-
+using data.API;
+using Microsoft.AspNetCore.Identity;
+using SmartLeaf.Data;
+using SmartLeaf.Domain;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,8 +23,6 @@ builder.Services.AddAuthentication(options =>
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
-
-
 .AddJwtBearer(options =>
 {
     options.RequireHttpsMetadata = false; // poner true en producción
@@ -45,13 +46,30 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
         builder => builder.WithOrigins("http://localhost:5173")
-                          .AllowAnyHeader()
-                          .AllowAnyMethod());
+        .AllowAnyHeader()
+        .AllowAnyMethod());
 });
 builder.Services.AddControllers();
 
+// Para la base de datos
+builder.Services.AddDbContext<SmartLeafDbContext>(options =>
+    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))));
+
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<SmartLeafDbContext>()
+    .AddDefaultTokenProviders();
+
+
 // 3. Registrar tu servicio de autenticación (AuthService)
 builder.Services.AddScoped<SmartLeaf.Services.AuthService>();
+
+// Mover esta configuración de cookies aquí, antes de builder.Build()
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/api/auth/login";
+    options.LogoutPath = "/api/auth/logout";
+});
 
 var app = builder.Build();
 

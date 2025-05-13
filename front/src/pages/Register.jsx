@@ -42,42 +42,35 @@ function Register() {
     setLoading(true);
     setError("");
 
-    try {
-      // 👉 Aquí va tu conexión a la base de datos o backend
-      // Ejemplo para Supabase:
-      /*
-      const { data, error } = await supabase.auth.signUp({
-        email: formData.email,
-        password: formData.password,
-        options: {
-          data: {
-            full_name: formData.fullName,
-            username: formData.username
-          }
-        }
-      });
-      */
+try {
+  const response = await fetch("http://localhost:5085/api/auth/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      email: formData.email,
+      password: formData.password,
+      fullName: formData.fullName
+    }),
+  });
 
-      // Ejemplo para API propia:
-      /*
-      const response = await fetch("https://tuservidor.com/api/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
+  if (!response.ok) {
+    const data = await response.json();
+    throw new Error(data.message || "Error al registrar usuario");
+  }
 
-      if (!response.ok) {
-        throw new Error("Error al registrar usuario");
-      }
-      */
+  alert("¡Registro exitoso!");
+  setFormData({
+    fullName: '',
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  });
 
-      // 👉 Aquí podrías redirigir o mostrar un mensaje de éxito
-      alert("¡Registro exitoso!");
-
-    } catch (err) {
-      console.error(err);
-      setError("Error al registrar. Intenta nuevamente.");
-    } finally {
+} catch (err) {
+  console.error(err);
+  setError(err.message || "Error al registrar. Intenta nuevamente.");
+} finally {
       setLoading(false);
     }
   };
