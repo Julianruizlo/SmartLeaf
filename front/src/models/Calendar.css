@@ -5,6 +5,13 @@
     font-family: 'Arial', sans-serif;
     background-color: #f9fdf9;
   }
+
+.calendar-day.selected {
+  background-color: #1c9c56;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
   
   .calendar-header {
     display: flex;

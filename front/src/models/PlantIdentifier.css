@@ -1,4 +1,4 @@
-  .plant-id-upload {
+.plant-id-upload {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,4 +80,20 @@
   .plant-id-guide-text {
     padding: 4px;
     margin-bottom: 1rem;
+  }
+
+  .reset-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #ff5252;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+
+  .reset-button:hover {
+    background-color: #e04848;
   }

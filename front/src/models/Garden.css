@@ -55,21 +55,19 @@
 }
 
 .add-button {
-  background-color: #1c9c56; /* Verde */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50px; /* Bordes redondeados */
-  cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px; /* Espaciado entre el icono y el texto */
-  transition: background-color 0.3s ease;
+    padding: 18px;
+    background-color: #00e600;
+    color: #000;
+    border: none;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .add-button:hover {
-  background-color: #148c47; /* Verde más oscuro */
+    background-color: #00cc00;
 }
 
 .edit-button {

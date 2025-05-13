@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import "../models/Chatbot.css"
-import { Dropdown } from '../components';
+import { PageHead } from '../components/';
 
 
 function PlantConsultantAI() {
@@ -34,13 +34,8 @@ function PlantConsultantAI() {
   return (
 
    <div > 
-    <div className='calendar-container'>
-    <header className="calendar-header">
-    <Link to = "/"><button className="back-button">←</button></Link>
-    <h2>Consultor Plantie</h2>
-    <button className="settings-button">⚙️</button>
-  </header>
-  </div>
+    <div className="app">
+    <PageHead />
   <div className="chatbot-container">
       <div className="chatbot-messages">
         {messages.map((msg, idx) => (
@@ -61,6 +56,7 @@ function PlantConsultantAI() {
         <button onClick={sendMessage}>Enviar</button>
       </div>
 
+    </div>
     </div>
 
     </div>
