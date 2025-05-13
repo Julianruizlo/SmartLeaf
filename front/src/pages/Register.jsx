@@ -49,7 +49,8 @@ try {
     body: JSON.stringify({
       email: formData.email,
       password: formData.password,
-      fullName: formData.fullName
+      fullName: formData.fullName,
+      username: formData.username
     }),
   });
 
