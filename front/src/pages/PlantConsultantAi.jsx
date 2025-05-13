@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../models/Chatbot.css";
-import { Dropdown } from '../components';
 
 function PlantConsultantAI() {
   const [messages, setMessages] = useState([]);
@@ -10,40 +9,39 @@ function PlantConsultantAI() {
   const sendMessage = async () => {
     if (!input.trim()) return;
 
+    // Agregar el mensaje del usuario al chat
     const newMessages = [...messages, { text: input, sender: 'user' }];
     setMessages(newMessages);
 
     try {
-      const response = await fetch('http://localhost:5085/api/chatbot/ask?accessToken=6zNLojd4RFuSAE4', {
+      const response = await fetch('http://localhost:5085/api/chatbot/ask?accessToken=AIzaSyC28Qojz6ws3C972l-tjQADeWUZ_YatSX0', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ question: input })
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [{ text: input }]
+            }
+          ]
+        }) // Enviar el texto de entrada al backend en el formato esperado
       });
 
       const data = await response.json();
       console.log("Respuesta de la API:", data);
 
-      if (data.messages && data.messages.length > 0)
-      {
-      // Filtrar los mensajes de tipo "answer"
-      const answers = data.messages.filter(msg => msg.type === 'answer');
-      const lastAnswer = answers[answers.length - 1];
+      // Verificar si hay candidatos en la respuesta
+      if (data.candidates && data.candidates.length > 0) {
+        const firstCandidate = data.candidates[0]; // Tomar el primer candidato
+        const answer = firstCandidate.content.parts.map(part => part.text).join(' '); // Combinar los textos de las partes
 
-      if (lastAnswer) 
-      {
-        setMessages(prev => [...prev, { text: lastAnswer.content, sender: 'bot' }]);
-      } else 
-        {
+        setMessages(prev => [...prev, { text: answer, sender: 'bot' }]);
+      } else {
         setMessages(prev => [...prev, { text: 'No se encontró una respuesta del bot.', sender: 'bot' }]);
-        }
-      } 
-    else 
-      {
-        setMessages(prev => [...prev, { text: 'La IA no devolvió una respuesta válida.', sender: 'bot' }]);
       }
     } catch (error) {
+      console.error("Error al conectar con la API:", error);
       setMessages(prev => [...prev, { text: 'Error al conectar con la IA.', sender: 'bot' }]);
     }
 

@@ -9,7 +9,7 @@ namespace data.API
     public class PlantIdService
 {
     private readonly HttpClient _httpClient;
-    private const string _apiKey = "Lq1gU81VpzPVQMvSmTm1ZHOLiPZuhFBCBYvtEUzzXO7IaIvDm2";
+    private const string _apiKey = "wIbuKl58vQx2VUhRbjvk2UGRsoc3FmC0raFAbNj4lssh0CsXPk";
     private const string _url = "https://api.plant.id/v2/identify";
 
     public PlantIdService(HttpClient httpClient)

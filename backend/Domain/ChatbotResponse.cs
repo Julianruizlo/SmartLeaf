@@ -1,21 +1,29 @@
 public class ChatbotResponse
 {
-    public List<Message> Messages { get; set; } = new();
-    public string Identification { get; set; } = string.Empty;
-    public int Remaining_Calls { get; set; }
-    public ModelParameters Model_Parameters { get; set; } = new();
-    public Dictionary<string, object> Feedback { get; set; } = new();
+    public List<Candidate> Candidates { get; set; } = new();
+    public UsageMetadata UsageMetadata { get; set; } = new();
 }
 
-public class Message
+public class Candidate
 {
-    public string Content { get; set; } = string.Empty;
-    public string Type { get; set; } = string.Empty;
-    public string Created { get; set; } = string.Empty;
+    public Content Content { get; set; } = new();
+    public string FinishReason { get; set; } = string.Empty;
+    public double AvgLogprobs { get; set; }
 }
 
-public class ModelParameters
+public class Content
 {
-    public string Model { get; set; } = string.Empty;
-    public double Temperature { get; set; }
+    public List<Part> Parts { get; set; } = new();
+}
+
+public class Part
+{
+    public string Text { get; set; } = string.Empty;
+}
+
+public class UsageMetadata
+{
+    public int PromptTokenCount { get; set; }
+    public int CandidatesTokenCount { get; set; }
+    public int TotalTokenCount { get; set; }
 }
