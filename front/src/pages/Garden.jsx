@@ -3,7 +3,7 @@ import { PlantContext } from "../context/PlantContext";
 import { PlantCard, PageHead } from "../components/";
 import "../models/Garden.css";
 
-const Garden = () => {
+export const Garden = () => {
   const { plants } = useContext(PlantContext);
 
   return (
