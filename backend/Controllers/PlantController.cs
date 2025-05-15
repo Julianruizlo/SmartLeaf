@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using data.API; // Asegúrate de que la ruta sea correcta
+using data.API; 
 using System.Threading.Tasks;
 
 namespace presentation.Controllers
