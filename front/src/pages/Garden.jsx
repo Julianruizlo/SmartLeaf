@@ -23,7 +23,7 @@ const Garden = () => {
       </div>
 
       <div className="buttons">
-        <button className="add-button" onClick={() => window.location.href = "/add"}>
+        <button className="add-button" onClick={() => window.location.href = "/agregar"}>
           Agregar planta
         </button>
         <button className="edit-button">Editar</button>

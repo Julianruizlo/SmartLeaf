@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import { PlantContext } from '../components/';
+import { PageHead } from '../components/';
 import "../models/AddPlant.css";
 
 const AddPlant = () => {
@@ -36,8 +37,11 @@ const AddPlant = () => {
     addPlant(newPlant);
 
     
-    navigate("/garden");
+
   };
+    const handleCancel = () => {
+  navigate("/garden");
+    };
 
   return (
     <div className="addplant-container">
