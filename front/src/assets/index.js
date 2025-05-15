@@ -8,3 +8,4 @@ export { default as Tomate } from './examples/Tomate.jpg';
 export { default as Albahaca } from './examples/Albahaca.jpg';
 export { default as Jazmin } from './examples/Jazmin.jpg';
 export { default as Camera } from './Analisis_1.jpg';
+export { default as Avatar } from './examples/Avatar.jpg';

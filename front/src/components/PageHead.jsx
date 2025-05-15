@@ -9,12 +9,15 @@ const titles = {
   "/calendario": "🗓️ Calendario ",
   "/camara": "🕵🏻 Analizador",
   "/biblioteca": "🌿 Botánica",
-  "/consultor": "👩🏻‍💼 Asistente virtual",
+  "/consultor": "👩🏻‍💼 Asistente",
   "/perfil": "Perfil",
   "/settings": "Configuración",
   "/jardin": "Jardín",
   "/registrar": "Registro",
   "/login": "Iniciar sesión",
+  "/add": "Nueva planta",
+  "/planta/:name": "Detalles de la planta",
+  "/not-found": "Página no encontrada",
 };
 
 function PageHead() {

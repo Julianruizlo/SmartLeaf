@@ -35,41 +35,49 @@ const PlantIdentifier = () => {
     }
   };
 
+  const handleReset = () => {
+    setImage(null);
+    setResult(null);
+  };
+
   const suggestion = result?.suggestions?.[0];
   const details = suggestion?.plant_details;
 
   return (
     <div className="app">
       <PageHead />
-      <div class="plant-id-header-container">
-        <img class="plant-id-header-image" src={Camera} alt="Encabezado"/>
-      </div>
+      {!result ? (
+        <>
+          <div className="plant-id-header-container">
+            <img className="plant-id-header-image" src={Camera} alt="Encabezado" />
+          </div>
 
-      <div className="plant-id-guide-text">
-        <p>Por favor, toma una fotografía de tu planta o carga una imagen para 
-          que podamos analizarla.</p>
-      </div>
+          <div className="plant-id-guide-text">
+            <p>Por favor, toma una fotografía de tu planta o carga una imagen para 
+              que podamos analizarla.</p>
+          </div>
 
-      <div className="plant-id-upload">
-        <input type="file" accept="image/*" onChange={handleImageUpload} />
-      </div>
+          <div className="plant-id-upload">
+            <input type="file" accept="image/*" onChange={handleImageUpload} />
+          </div>
 
-      {image && (
-        <div className="plant-id-preview">
-          <img src={`data:image/jpeg;base64,${image}`} alt="Preview" />
-          <button onClick={handleIdentify} disabled={loading}>
-            {loading ? 'Identificando...' : 'Identificar planta'}
-          </button>
-        </div>
-      )}
-
-      {result && (
+          {image && (
+            <div className="plant-id-preview">
+              <img src={`data:image/jpeg;base64,${image}`} alt="Preview" />
+              <button onClick={handleIdentify} disabled={loading}>
+                {loading ? 'Identificando...' : 'Identificar planta'}
+              </button>
+            </div>
+          )}
+        </>
+      ) : (
         <div className="plant-id-result">
           <h3>Resultado:</h3>
           <p><strong>Nombre común:</strong> {details?.common_names?.join(', ') || 'No disponible'}</p>
           <p><strong>Nombre científico:</strong> {suggestion?.plant_name || 'No disponible'}</p>
           <p><strong>Descripción:</strong> {details?.wiki_description?.value || 'No disponible'}</p>
           <a href={details?.url} target="_blank" rel="noopener noreferrer">Más info</a>
+          <button onClick={handleReset} className="reset-button">Nueva identificación</button>
         </div>
       )}
     </div>
