@@ -5,4 +5,5 @@ export { default as PageHead } from './PageHead';
 export { default as BottomNav } from './BottomNav';
 export { default as AuthRoute } from './AuthRoute';
 export { default as Dropdown } from './DropDown';
-export { PlantProvider } from './PlantProvider'; // Exportar correctamente PlantProvider
+export { default as PlantProvider } from './PlantProvider';
+export { PlantContext } from './PlantContext';

@@ -1,12 +1,13 @@
 import { React, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-
-import { Home, NotFound, Garden, Calendar, PlantIdentifier, PlantsLibrary, PlantConsultantAI, Profile, Settings } from "../pages/";
-import { Login, Registro, AddPlant, PlantDetails } from "../pages/";
-
+import {
+  Home, NotFound, Garden, Calendar, PlantIdentifier,
+  PlantsLibrary, PlantConsultantAI, Profile, Settings,
+  AddPlant, PlantDetail
+} from "../pages/";
+import { Login, Registro } from "../pages/";
 import { getToken } from "../utils/token";
-import { AuthRoute, BottomNav } from "../components/";
-import { PlantProvider } from "../components/PlantProvider"; // Importar el contexto
+import { AuthRoute, BottomNav, PlantProvider } from "../components/";
 import "../models/App.css";
 
 function App() {
@@ -16,34 +17,68 @@ function App() {
     const token = getToken();
     setIsAuthenticated(!!token);
   }, []);
-  console.log("isAuthenticated:", isAuthenticated); // Depuración
 
   return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={isAuthenticated ? <Navigate to="/home" /> : <Navigate to="/login" />} />
+        <Route path="/home" element={<AuthRoute><Home /></AuthRoute>} />
 
-    <PlantProvider> {/* Envolver las rutas con el proveedor */}
-      <Router>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route
-            path="/"
-            element={isAuthenticated ? <Navigate to="/home" /> : <Navigate to="/login" />}
-          />
-          <Route path="/home" element={<AuthRoute> <Home /> </AuthRoute>} />
-          <Route path="/huerta" element={<AuthRoute> <> <Garden /> <BottomNav /> </> </AuthRoute>} />
-          <Route path="/calendario" element={<AuthRoute> <> <Calendar /> <BottomNav /> </> </AuthRoute>} />
-          <Route path="/camara" element={<AuthRoute> <> <PlantIdentifier /> <BottomNav /> </> </AuthRoute>} />
-          <Route path="/biblioteca" element={<AuthRoute> <> <PlantsLibrary /> <BottomNav /> </> </AuthRoute>} />
-          <Route path="/consultor" element={<AuthRoute> <> <PlantConsultantAI /> <BottomNav /> </> </AuthRoute>} />
-          <Route path="/perfil" element={<AuthRoute> <> <Profile /> <BottomNav /> </> </AuthRoute>} />
-          <Route path="/settings" element={<AuthRoute> <> <Settings /> <BottomNav /> </> </AuthRoute>} />
-          <Route path="/registrar" element={<Registro />} />
-          <Route path="/add" element={<AuthRoute> <> <AddPlant /> <BottomNav /> </> </AuthRoute>} />
-          <Route path="/planta/:name" element={<AuthRoute> <> <PlantDetails /> <BottomNav /> </> </AuthRoute>} /> {/* Ruta dinámica */}
-          <Route path="*" element={<AuthRoute> <> <NotFound /> <BottomNav /> </> </AuthRoute>} />
-        </Routes>
-      </Router>
-    </PlantProvider>
+        {/* Garden envuelto con contexto */}
+        <Route
+          path="/garden"
+          element={
+            <AuthRoute>
+              <PlantProvider>
+                <>
+                  <Garden />
+                  <BottomNav />
+                </>
+              </PlantProvider>
+            </AuthRoute>
+          }
+        />
 
+        <Route path="/calendar" element={<AuthRoute><><Calendar /><BottomNav /></></AuthRoute>} />
+        <Route path="/camera" element={<AuthRoute><><PlantIdentifier /><BottomNav /></></AuthRoute>} />
+
+        {/* Biblioteca también usa contexto */}
+        <Route
+          path="/biblioteca"
+          element={
+            <AuthRoute>
+              <PlantProvider>
+                <>
+                  <PlantsLibrary />
+                  <BottomNav />
+                </>
+              </PlantProvider>
+            </AuthRoute>
+          }
+        />
+
+        <Route path="/consultor" element={<AuthRoute><><PlantConsultantAI /><BottomNav /></></AuthRoute>} />
+        <Route path="/perfil" element={<AuthRoute><><Profile /><BottomNav /></></AuthRoute>} />
+        <Route path="/settings" element={<AuthRoute><><Settings /><BottomNav /></></AuthRoute>} />
+        <Route path="/registrar" element={<Registro />} />
+        <Route path="*" element={<AuthRoute><><NotFound /><BottomNav /></></AuthRoute>} />
+        <Route
+          path="/agregar"
+          element={
+            <AuthRoute>
+              <PlantProvider>
+                <>
+                  <AddPlant />
+                  <BottomNav />
+                </>
+              </PlantProvider>
+            </AuthRoute>
+          }
+        />
+        <Route path="/descripcion" element={<AuthRoute><><PlantDetail /><BottomNav /></></AuthRoute>} />
+      </Routes>
+    </Router>
   );
 }
 

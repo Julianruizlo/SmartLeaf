@@ -1,11 +1,16 @@
 import React, { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { PageHead } from "../components";
-import { PlantContext } from "../context/PlantContext"; // Importar desde el archivo correcto
+import { useNavigate } from 'react-router-dom';
+import { PlantContext } from '../components/';
 import "../models/AddPlant.css";
 
-function AddPlant() {
-  const { addPlant } = useContext(PlantContext); // Acceder a la función addPlant
+const AddPlant = () => {
+  const [species, setSpecies] = useState("");
+  const [name, setName] = useState("");
+  const [date, setDate] = useState("");
+  console.log(useContext)
+
+  const { addPlant } = useContext(PlantContext);
+  console.log(addPlant); // Esto debería mostrar la función `addPlant` si el contexto está funcionando.
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     species: "",
@@ -26,26 +31,12 @@ function AddPlant() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validar que plantingDate sea una fecha válida
-    const plantingDate = new Date(formData.plantingDate);
-    if (isNaN(plantingDate.getTime())) {
-      alert("Por favor, ingresa una fecha de plantación válida.");
-      return;
-    }
+    
+    const newPlant = { species, name, date };
+    addPlant(newPlant);
 
-    addPlant(formData); // Agregar la planta al contexto
-    navigate("/huerta"); // Redirigir a la página de la huerta
-  };
-
-  const handleCancel = () => {
-    setFormData({
-      species: "",
-      name: "",
-      plantingDate: "",
-      location: "",
-      status: "",
-    }); // Limpiar los datos del formulario
-    navigate(-1); // Volver a la página anterior
+    
+    navigate("/garden");
   };
 
   return (
