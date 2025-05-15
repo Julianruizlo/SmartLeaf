@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "../models/Calendar.css";
 import { PageHead } from "../components/";
-import { PlantContext } from "../context/PlantContext";
+import { PlantContext } from "../components/";
 
 function Calendar() {
   const { plants, calculateWateringDates } = useContext(PlantContext);

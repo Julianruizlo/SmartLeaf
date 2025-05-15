@@ -1,10 +1,8 @@
 import { React, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import {
-  Home, NotFound, Garden, Calendar, PlantIdentifier,
+import {Home, NotFound, Garden, Calendar, PlantIdentifier,
   PlantsLibrary, PlantConsultantAI, Profile, Settings,
-  AddPlant, PlantDetail
-} from "../pages/";
+  AddPlant, PlantDetails} from "../pages/";
 import { Login, Registro } from "../pages/";
 import { getToken } from "../utils/token";
 import { AuthRoute, BottomNav, PlantProvider } from "../components/";
@@ -76,7 +74,7 @@ function App() {
             </AuthRoute>
           }
         />
-        <Route path="/descripcion" element={<AuthRoute><><PlantDetail /><BottomNav /></></AuthRoute>} />
+        <Route path="/descripcion" element={<AuthRoute><><PlantDetails /><BottomNav /></></AuthRoute>} />
       </Routes>
     </Router>
   );

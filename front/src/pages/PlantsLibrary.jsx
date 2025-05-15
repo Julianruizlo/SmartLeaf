@@ -1,5 +1,6 @@
 import React from 'react';
 import '../models/PlantLibrary.css';
+import { Link } from 'react-router-dom';
 import { PageHead } from '../components/';
 import { Cilantro, Jazmin, Tomate, Albahaca} from '../assets/';
 
