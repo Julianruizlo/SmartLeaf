@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { PageHead } from '../components/';
 import { Cilantro, Jazmin, Tomate, Albahaca} from '../assets/';
-
+import { Link } from 'react-router-dom';
 const plantSections = [
   {
     title: 'Plantas populares',
