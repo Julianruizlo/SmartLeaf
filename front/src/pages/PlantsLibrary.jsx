@@ -1,38 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../models/PlantLibrary.css';
 import { Link } from 'react-router-dom';
-
 import { PageHead } from '../components/';
-import { Cilantro, Jazmin, Tomate, Albahaca} from '../assets/';
-import { Link } from 'react-router-dom';
-const plantSections = [
-  {
-    title: 'Plantas populares',
-    items: [
-      { name: 'Jazmín', image: {Jazmin} },
-      { name: 'Lavanda', image: '/images/lavanda.jpg' },
-      { name: 'Orquídea', image: '/images/orquidea.jpg' },
-    ],
-  },
-  {
-    title: 'Frutas y vegetales',
-    items: [
-      { name: 'Aguacate', image: '/images/aguacate.jpg' },
-      { name: 'Zanahoria', image: '/images/zanahoria.jpg' },
-      { name: 'Fresa', image: '/images/fresa.jpg' },
-    ],
-  },
-  {
-    title: 'Flores populares',
-    items: [
-      { name: 'Rosa', image: '/images/rosa.jpg' },
-      { name: 'Girasol', image: '/images/girasol.jpg' },
-      { name: 'Tulipán', image: '/images/tulipan.jpg' },
-    ],
-  },
-];
+import { getPlantInfoByName } from '../services/plantDataService';
 
 function PlantLibrary() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [plantResults, setPlantResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const handleSearch = async (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+
+    if (value.trim() === '') {
+      setPlantResults([]);
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const data = await getPlantInfoByName(value);
+      // Si tu backend devuelve un array, usa data. Si es un objeto, usa [data]
+      setPlantResults(Array.isArray(data) ? data : [data]);
+    } catch (error) {
+      setPlantResults([]);
+    }
+    setLoading(false);
+  };
+
   return (
     <div className="app">
       <div className="library-container">
@@ -41,23 +37,27 @@ function PlantLibrary() {
           type="text"
           placeholder="Buscar plantas, frutas, flores..."
           className="search-bar"
+          value={searchTerm}
+          onChange={handleSearch}
         />
       </div>
 
-      {plantSections.map((section, idx) => (
-        <div key={idx} className="section">
-          <h3 className="section-title">{section.title}</h3>
+      {loading && <p>Buscando...</p>}
+
+      {plantResults.length > 0 && (
+        <div className="section">
+          <h3 className="section-title">Resultados</h3>
           <div className="plant-list-lib">
-            {section.items.map((item, i) => (
+            {plantResults.map((item, i) => (
               <div key={i} className="plant-card-lib">
-                <img src={item.image} alt={item.name} className="plant-image-lib" />
+                <img src={item.imageUrl} alt={item.name} className="plant-image-lib" />
                 <p className="plant-name-lib">{item.name}</p>
-                 <Link to="/descripcion" ></Link>
+                <Link to={`/descripcion/${item.name.toLowerCase()}`} />
               </div>
             ))}
           </div>
         </div>
-      ))}
+      )}
     </div>
   );
 }

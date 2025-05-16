@@ -41,7 +41,7 @@ function App() {
         <Route path="/calendar" element={<AuthRoute><PlantProvider><><Calendar /><BottomNav /></></PlantProvider></AuthRoute>} />
         <Route path="/camera" element={<AuthRoute><><PlantIdentifier /><BottomNav /></></AuthRoute>} />
 
-        {/* Biblioteca también usa contexto */}
+        
         <Route
           path="/biblioteca"
           element={

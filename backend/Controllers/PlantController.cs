@@ -26,5 +26,17 @@ namespace presentation.Controllers
             var result = await _plantIdService.IdentifyPlantAsync(base64Image);
             return Ok(result);
         }
+         [HttpPost("Search")]
+        public async Task<IActionResult> SearchPlant([FromBody] string nombrePlanta)
+        {
+            if (string.IsNullOrEmpty(nombrePlanta))
+            {
+                return BadRequest("El nombre de la planta no puede estar vacío.");
+            }
+           
+
+           // var result = await _plantIdService.IdentifyPlantAsync(nombrePlanta);
+            return Ok(nombrePlanta);
+        }
     }
 }
