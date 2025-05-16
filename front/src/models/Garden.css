@@ -6,45 +6,42 @@
 
 .plant-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Ajusta el número de columnas automáticamente */
-  gap: 16px; /* Espaciado uniforme entre las tarjetas */
-  justify-content: center; /* Centra las tarjetas horizontalmente */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila, 2 filas = 6 por pantalla */
+  grid-auto-rows: 180px;
+  gap: 16px;
+  justify-items: stretch;
+  align-items: start;
   margin-bottom: 20px;
+  width: 100%;
+  min-height: 400px; /* Ajusta según tu diseño */
 }
+
 .plant-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   border-radius: 12px;
   overflow: hidden;
-  width: 170px;
-  padding: 0;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #f8fbf7;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  width: 100%;
+  height: 100%;
+  transition: box-shadow 0.2s;
 }
 
 .plant-card:hover {
-  transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
 .plant-image {
-  width: 170px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin: 0;
+  width: 100%;
+  height: 100px;
+  object-fit: contain; /* Para que no se corte la imagen */
+  background: #e8f5e9;
 }
 
-.plant-name {
-  margin: 0 0 0 0.2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-  text-align: left;
-}
-
-.plant-status {
-  margin: 0rem 0 0.25rem 0.3rem;
-  font-size: 0.9rem;
-  color: #888;
+.plant-name, .plant-status {
+  margin: 0.2rem 0.5rem;
   text-align: left;
 }
 

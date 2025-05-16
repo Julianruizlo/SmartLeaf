@@ -9,6 +9,10 @@
   margin-bottom: 1rem;
   width: 100%;
   box-sizing: border-box;
+   position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #f9fdf9;
 }
 
 .header-title {
@@ -18,5 +22,19 @@
   font-weight: 600; 
   line-height: 50px; 
   padding: 20px;
+}
+
+.back-button, .settings-button, .dropdown-button {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: none;
+  border-radius: 50%;
+  padding: 8px 12px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.back-button:hover, .settings-button:hover, .dropdown-button:hover {
+  background: #c8e6c9;
 }
 

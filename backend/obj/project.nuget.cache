@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "CN9HNp72eLw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\maria\\Desktop\\Facultad\\SmartLeaf\\backend\\backend.csproj",
+  "projectFilePath": "C:\\Users\\Urano\\Desktop\\Facultad\\Tercer Año\\SmartLeaf\\SmartLeaf\\backend\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Urano\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Urano\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.4\\microsoft.aspnetcore.authentication.jwtbearer.9.0.4.nupkg.sha512",

@@ -11,7 +11,7 @@ function Settings() {
     console.log("Idioma:", language);
     console.log("Notificaciones:", notifications);
     console.log("Tema:", theme);
-    // Aquí podrías guardar en localStorage, context, etc.
+    
     alert("¡Configuraciones guardadas!");
   };
 

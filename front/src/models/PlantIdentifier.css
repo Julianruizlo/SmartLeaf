@@ -92,8 +92,43 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 1rem;
+    display: block;
+    width: 100%;
+    margin: 1.5rem auto 0 auto;
   }
 
   .reset-button:hover {
     background-color: #e04848;
+  }
+
+  .pretty-upload-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1c9c56;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+    margin-bottom: 1rem;
+  }
+  .pretty-upload-btn:hover {
+    background-color: #158a47;
+  }
+
+  .add-to-garden-btn {
+    background-color: #00c853;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .add-to-garden-btn:hover {
+    background-color: #009624;
   }

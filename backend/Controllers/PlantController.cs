@@ -34,9 +34,7 @@ namespace presentation.Controllers
                 return BadRequest("El nombre de la planta no puede estar vacío.");
             }
            
-
-           // var result = await _plantIdService.IdentifyPlantAsync(nombrePlanta);
-            return Ok(nombrePlanta);
+            return Ok(new { name = nombrePlanta });
         }
     }
 }
