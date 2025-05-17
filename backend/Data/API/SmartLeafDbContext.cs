@@ -10,8 +10,9 @@ namespace SmartLeaf.Data
         public SmartLeafDbContext(DbContextOptions<SmartLeafDbContext> options)
             : base(options) { }
 
-        // Agregá otras tablas si las tenés, pero NO agregues DbSet<ApplicationUser> acá.
-        // Identity ya lo maneja internamente.
+        public DbSet<Plant> Plants { get; set; }
+        public DbSet<PlantType> PlantTypes { get; set; }
+
     }
 }
 
