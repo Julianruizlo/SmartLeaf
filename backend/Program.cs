@@ -15,6 +15,7 @@ var config = builder.Configuration;
 var jwtKey = config["Jwt:Key"] ?? throw new InvalidOperationException("JWT key missing in configuration");
 
 // 1. Configurar autenticación JWT
+builder.Services.AddScoped<SupabaseDbService>();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
