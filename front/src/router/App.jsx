@@ -60,21 +60,11 @@ function App() {
         <Route path="/perfil" element={<AuthRoute><><Profile /><BottomNav /></></AuthRoute>} />
         <Route path="/settings" element={<AuthRoute><><Settings /><BottomNav /></></AuthRoute>} />
         <Route path="/registrar" element={<Registro />} />
-        <Route path="*" element={<AuthRoute><><NotFound /><BottomNav /></></AuthRoute>} />
-        <Route
-          path="/agregar"
-          element={
-            <AuthRoute>
-              <PlantProvider>
-                <>
-                  <AddPlant />
-                  <BottomNav />
-                </>
-              </PlantProvider>
-            </AuthRoute>
-          }
-        />
+        <Route path="/agregar" element={<AuthRoute><PlantProvider><><AddPlant /><BottomNav /></></PlantProvider></AuthRoute>} />
         <Route path="/descripcion" element={<AuthRoute><><PlantDetails /><BottomNav /></></AuthRoute>} />
+        <Route path="/planta/:name" element={<AuthRoute><><PlantDetails /><BottomNav /></></AuthRoute>} />
+        <Route path="/descripcion/:name" element={<AuthRoute><><PlantDetails /><BottomNav /></></AuthRoute>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

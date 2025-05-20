@@ -8,7 +8,7 @@ const statusColors = {
   "Recién plantada": "#888",
 };
 
-const PlantCard = ({ name = "Sin nombre", image = null, status = "Recién plantada" }) => {
+const PlantCard = ({ name = "Sin nombre", image = null, status = "Recién plantada", plantCard = null }) => {
   const ruta = `/planta/${name.toLowerCase()}`;
   return (
     <div className="plant-card">
@@ -26,6 +26,17 @@ const PlantCard = ({ name = "Sin nombre", image = null, status = "Recién planta
       >
         {status}
       </p>
+      {plantCard && (
+        <Link
+          to={`/descripcion/${encodeURIComponent(plantCard.name)}`}
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <div className="plant-card-lib">
+            <img src={plantCard.imageUrl} alt={plantCard.name} className="plant-image-lib" />
+            <p className="plant-name-lib">{plantCard.name}</p>
+          </div>
+        </Link>
+      )}
     </div>
   );
 };

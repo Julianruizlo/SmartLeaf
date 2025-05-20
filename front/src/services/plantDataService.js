@@ -1,18 +1,12 @@
 import axios from "axios";
 
-export const getPlantInfoByName = async function(nombrePlanta) {
+export const getPlantImageByName = async (plantName) => {
   try {
-    
-    const response = await axios.post(
-      "http://localhost:5085/api/plant/search",
-      JSON.stringify(nombrePlanta),
-      { headers: { "Content-Type": "application/json" } }
-      
-    );
-console.log(response.data);
-    return response.data; 
+    const res = await axios.get(`http://localhost:5085/api/plantsearch/${encodeURIComponent(plantName)}`);
+    console.log("Respuesta de la API:", res.data); // <-- Aquí ves el JSON en la consola
+    return res.data;
   } catch (error) {
-    console.error("Error al obtener info de planta:", error);
-    throw error;
+    throw new Error('No se encontró la planta o no tiene imagen.');
   }
-}
+};
+
