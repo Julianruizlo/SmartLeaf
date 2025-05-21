@@ -78,7 +78,12 @@ function PlantLibrary() {
       {plantCard && (
         <Link
           to={`/descripcion/${encodeURIComponent(plantCard.name)}`}
-          state={{ imageUrl: plantCard.imageUrl }}
+          state={{
+            imageUrl: plantCard.imageUrl,
+            commonName: plantCard.commonName,
+            scientificName: plantCard.scientificName,
+            description: plantCard.description
+          }}
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <div className="plant-card-lib">

@@ -47,27 +47,33 @@ public class PlantSearchController : ControllerBase
         if (string.IsNullOrEmpty(nombrePlanta))
             return BadRequest("El nombre de la planta no puede estar vacío.");
 
-        // Llama a la API de iNaturalist
+        // Usa el HttpClient inyectado
         var encodedName = System.Net.WebUtility.UrlEncode(nombrePlanta);
         var url = $"https://api.inaturalist.org/v1/search?q={encodedName}&sources=taxa";
-        using var httpClient = new HttpClient();
-        var response = await httpClient.GetAsync(url);
+        var response = await _httpClient.GetAsync(url);
 
         if (!response.IsSuccessStatusCode)
             return StatusCode((int)response.StatusCode, "Error consultando la API de iNaturalist");
 
         var content = await response.Content.ReadAsStringAsync();
+
+        // Log para depuración (puedes quitarlo en producción)
+        Console.WriteLine("Respuesta de iNaturalist:");
+        Console.WriteLine(content);
+
         var json = Newtonsoft.Json.Linq.JObject.Parse(content);
 
         var results = json["results"];
         if (results == null || !results.HasValues)
             return Ok(new List<object>()); // Devuelve lista vacía si no hay resultados
 
-        // Devuelve un array de objetos { name, imageUrl }
+        // Devuelve un array de objetos { name, scientificName, imageUrl, description }
         var plantCards = results
             .Select(r => new {
-                name = r["record"]?["name"]?.ToString() ?? nombrePlanta,
-                imageUrl = r["record"]?["default_photo"]?["medium_url"]?.ToString() ?? ""
+                name = r["record"]?["preferred_common_name"]?.ToString() ?? r["record"]?["name"]?.ToString(),
+                scientificName = r["record"]?["name"]?.ToString(),
+                imageUrl = r["record"]?["default_photo"]?["medium_url"]?.ToString() ?? "",
+                description = r["record"]?["wikipedia_summary"]?.ToString() ?? ""
             })
             .Where(p => !string.IsNullOrEmpty(p.imageUrl))
             .ToList();
