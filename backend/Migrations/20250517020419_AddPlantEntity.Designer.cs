@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmartLeaf.Data;
 
@@ -10,9 +11,11 @@ using SmartLeaf.Data;
 namespace backend.Migrations
 {
     [DbContext(typeof(SmartLeafDbContext))]
-    partial class SmartLeafDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250517020419_AddPlantEntity")]
+    partial class AddPlantEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
