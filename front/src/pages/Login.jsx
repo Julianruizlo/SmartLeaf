@@ -14,18 +14,15 @@ import Cookies from 'js-cookie';
  
    const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
-  
     try {
-      const token = await login(email, password);
-      saveToken(token);
-      if (token) {
-        navigate('/home');
-      } else {
-        setError("Error al guardar el token. Intente nuevamente.");
-      }
-    } catch (error) {
-      setError("Credenciales incorrectas");
+      const data = await login(email, password);
+      // Guarda el token en localStorage o cookies
+      localStorage.setItem("token", data.token);
+      Cookies.set("userData", JSON.stringify({ email })); // Puedes guardar más info si quieres
+      // Redirige al home o donde quieras
+      navigate("/home");
+    } catch (err) {
+      setError(err.message);
     }
   };
 

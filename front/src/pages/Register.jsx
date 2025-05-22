@@ -4,7 +4,8 @@ import { PageHead } from "../components/";
 import Container from "../components/Container";
 import ButtonX from "../components/ButtonX";
 import { Eye, EyeOff } from "lucide-react";
-
+import { register } from "../services/authServices";
+import { useNavigate } from "react-router-dom";
 function Register() {
   const [formData, setFormData] = useState({
     fullName: '',
@@ -18,7 +19,8 @@ function Register() {
   const [showConfirm, setShowConfirm] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-
+  const navigate = useNavigate();
+ 
   // Manejar cambios en los campos del formulario
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,56 +29,12 @@ function Register() {
   // Función para enviar datos a la base de datos
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Validación básica
-    if (formData.password !== formData.confirmPassword) {
-      setError("Las contraseñas no coinciden.");
-      return;
-    }
-
-    if (!formData.email || !formData.username || !formData.password) {
-      setError("Por favor completa todos los campos.");
-      return;
-    }
-
-    setLoading(true);
-    setError("");
-
     try {
-      // 👉 Aquí va tu conexión a la base de datos o backend
-      // Ejemplo para Supabase:
-      /*
-      const { data, error } = await supabase.auth.signUp({
-        email: formData.email,
-        password: formData.password,
-        options: {
-          data: {
-            full_name: formData.fullName,
-            username: formData.username
-          }
-        }
-      });
-      */
-
-      // Ejemplo para API propia:
-      /*
-      const response = await fetch("https://tuservidor.com/api/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
-
-      if (!response.ok) {
-        throw new Error("Error al registrar usuario");
-      }
-      */
-
-      // 👉 Aquí podrías redirigir o mostrar un mensaje de éxito
+      await register(formData.fullName, formData.username, formData.email, formData.password);
       alert("¡Registro exitoso!");
-
+      navigate("/login"); // <-- Redirige al login
     } catch (err) {
-      console.error(err);
-      setError("Error al registrar. Intenta nuevamente.");
+      setError(err.message);
     } finally {
       setLoading(false);
     }
