@@ -1,50 +1,79 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { PageHead } from "../components";
-import { PlantContext } from "../context/PlantContext"; // Importar desde el archivo correcto
+import { addPlant } from "../services/plantService";
 import "../models/AddPlant.css";
 
-function AddPlant() {
-  const { addPlant } = useContext(PlantContext); // Acceder a la función addPlant
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    species: "",
-    name: "",
-    plantingDate: "",
-    location: "",
-    status: "",
-  });
+const speciesOptions = [
+  { id: 1, name: "Aloe Vera" },
+  { id: 2, name: "Basil" },
+  { id: 3, name: "Cactus" },
+  { id: 4, name: "Fern" },
+  { id: 5, name: "Rosemary" }
+];
 
-  const speciesOptions = ["Aloe Vera", "Basil", "Cactus", "Fern", "Rosemary"];
-  const statusOptions = ["¡Regar!", "¡Cosechar!", "Recién plantada"]; // Opciones de estado
+const statusOptions = [
+  { id: 1, label: "¡Regar!" },
+  { id: 2, label: "¡Cosechar!" },
+  { id: 3, label: "Recién plantada" }
+];
+
+function AddPlant() {
+  const [formData, setFormData] = useState({
+    plantTypeId: "",
+    customName: "",
+    plantedDate: "",
+    region: "",
+    status: ""
+  });
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Validar que plantingDate sea una fecha válida
-    const plantingDate = new Date(formData.plantingDate);
-    if (isNaN(plantingDate.getTime())) {
-      alert("Por favor, ingresa una fecha de plantación válida.");
+    setLoading(true);
+    setError("");
+    // Validar fecha
+    const plantedDate = new Date(formData.plantedDate);
+    if (isNaN(plantedDate.getTime())) {
+      setError("Por favor, ingresa una fecha de plantación válida.");
+      setLoading(false);
       return;
     }
-
-    addPlant(formData); // Agregar la planta al contexto
-    navigate("/huerta"); // Redirigir a la página de la huerta
+    try {
+      const token = localStorage.getItem("token");
+      await addPlant(
+        {
+          plantTypeId: parseInt(formData.plantTypeId),
+          customName: formData.customName,
+          plantedDate: formData.plantedDate,
+          region: formData.region,
+          status: parseInt(formData.status)
+        },
+        token
+      );
+      alert("¡Planta agregada correctamente!");
+      navigate("/garden");
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleCancel = () => {
     setFormData({
-      species: "",
-      name: "",
-      plantingDate: "",
-      location: "",
-      status: "",
-    }); // Limpiar los datos del formulario
+      plantTypeId: "",
+      customName: "",
+      plantedDate: "",
+      region: "",
+      status: ""
+    });
     navigate(-1); // Volver a la página anterior
   };
 
@@ -54,22 +83,22 @@ function AddPlant() {
       <h2 className="addplant-title">Add a plant</h2>
       <form onSubmit={handleSubmit} className="addplant-form">
         <select
-          name="species"
-          value={formData.species}
+          name="plantTypeId"
+          value={formData.plantTypeId}
           onChange={handleChange}
           className="addplant-input"
           required
         >
           <option value="" disabled>Select species</option>
           {speciesOptions.map((species) => (
-            <option key={species} value={species}>{species}</option>
+            <option key={species.id} value={species.id}>{species.name}</option>
           ))}
         </select>
 
         <input
           type="text"
-          name="name"
-          value={formData.name}
+          name="customName"
+          value={formData.customName}
           placeholder="Give it a name"
           onChange={handleChange}
           className="addplant-input"
@@ -78,8 +107,8 @@ function AddPlant() {
 
         <input
           type="date"
-          name="plantingDate"
-          value={formData.plantingDate}
+          name="plantedDate"
+          value={formData.plantedDate}
           onChange={handleChange}
           className="addplant-input"
           required
@@ -87,8 +116,8 @@ function AddPlant() {
 
         <input
           type="text"
-          name="location"
-          value={formData.location}
+          name="region"
+          value={formData.region}
           placeholder="Location"
           onChange={handleChange}
           className="addplant-input"
@@ -99,23 +128,27 @@ function AddPlant() {
           value={formData.status}
           onChange={handleChange}
           className="addplant-input"
+          required
         >
           <option value="" disabled>Select status</option>
           {statusOptions.map((status) => (
-            <option key={status} value={status}>{status}</option>
+            <option key={status.id} value={status.id}>{status.label}</option>
           ))}
         </select>
 
         <div className="addplant-buttons">
-          <button type="submit" className="addplant-upload">Add Plant</button>
+          <button type="submit" className="addplant-upload" disabled={loading}>
+            {loading ? "Agregando..." : "Add Plant"}
+          </button>
           <button
             type="button"
             className="addplant-cancel"
-            onClick={handleCancel} // Llamar a la función handleCancel
+            onClick={handleCancel}
           >
             Cancel
           </button>
         </div>
+        {error && <div style={{ color: "red", marginTop: "10px" }}>{error}</div>}
       </form>
     </div>
   );

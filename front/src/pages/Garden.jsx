@@ -1,21 +1,36 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { PlantContext } from "../context/PlantContext";
 import { PlantCard, PageHead } from "../components/";
 import "../models/Garden.css";
+import { getMyPlants } from "../services/plantService";
 
-const Garden = () => {
-  const { plants } = useContext(PlantContext);
+function Garden() {
+  const { plants: contextPlants } = useContext(PlantContext);
+  const [plants, setPlants] = useState([]);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const fetchPlants = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        const data = await getMyPlants(token);
+        setPlants(data);
+      } catch (err) {
+        setError(err.message);
+      }
+    };
+    fetchPlants();
+  }, []);
 
   return (
     <div className="app">
       <PageHead />
 
       <div className="plant-list">
-       
-        {plants.map((plant, index) => (
+        {(plants.length > 0 ? plants : contextPlants).map((plant, index) => (
           <PlantCard
             key={index}
-            name={plant.name}
+            name={plant.customName || plant.name}
             image={plant.image}
             status={plant.status}
           />
@@ -28,9 +43,9 @@ const Garden = () => {
         </button>
         <button className="edit-button">Editar</button>
       </div>
+      {error && <div style={{ color: "red" }}>{error}</div>}
     </div>
   );
-};
+}
 
 export default Garden;
-

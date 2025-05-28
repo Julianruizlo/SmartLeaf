@@ -1,0 +1,3 @@
+dotnet add package Npgsql
+
+colocar dentro de la consola eso sino no anda nunca.
