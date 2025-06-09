@@ -19,22 +19,21 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={isAuthenticated ? <Navigate to="/home" /> : <Navigate to="/login" />} />
-        <Route path="/home" element={<AuthRoute><Home /></AuthRoute>} />
+        
+        <Route path="/home" element={<Home />} />
 
         {/* Garden envuelto con contexto */}
         <Route
           path="/garden"
           element={
-            <AuthRoute>
+            
               <PlantProvider>
                 <>
                   <Garden />
                   <BottomNav />
                 </>
               </PlantProvider>
-            </AuthRoute>
+            
           }
         />
 
@@ -60,7 +59,7 @@ function App() {
         <Route path="/perfil" element={<AuthRoute><><Profile /><BottomNav /></></AuthRoute>} />
         <Route path="/settings" element={<AuthRoute><><Settings /><BottomNav /></></AuthRoute>} />
         <Route path="/registrar" element={<Registro />} />
-        <Route path="/agregar" element={<AuthRoute><PlantProvider><><AddPlant /><BottomNav /></></PlantProvider></AuthRoute>} />
+        <Route path="/agregar" element={<PlantProvider><><AddPlant /><BottomNav /></></PlantProvider>} />
         <Route path="/descripcion" element={<AuthRoute><><PlantDetails /><BottomNav /></></AuthRoute>} />
         <Route path="/planta/:name" element={<AuthRoute><><PlantDetails /><BottomNav /></></AuthRoute>} />
         <Route path="/descripcion/:name" element={<AuthRoute><><PlantDetails /><BottomNav /></></AuthRoute>} />

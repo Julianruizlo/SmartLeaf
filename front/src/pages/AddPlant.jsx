@@ -4,81 +4,67 @@ import { PlantContext } from '../components/';
 import { PageHead } from '../components/';
 import "../models/AddPlant.css";
 
+
+import aloeVeraImg from '../plantsv1/AloeVera.png';
+import basilImg from '../plantsv1/Basil.png';
+import cactusImg from '../plantsv1/Cactus.png';
+import fernImg from '../plantsv1/Fern.png';
+import rosemaryImg from '../plantsv1/Rosemary.png';
+
+const speciesImages = {
+  "Aloe Vera": aloeVeraImg,
+  "Basil": basilImg,
+  "Cactus": cactusImg,
+  "Fern": fernImg,
+  "Rosemary": rosemaryImg
+};
+
 const AddPlant = () => {
   const navigate = useNavigate();
+  const { addPlant } = useContext(PlantContext);
+
   const [formData, setFormData] = useState({
     species: "",
     name: "",
     plantingDate: "",
     location: "",
     status: "",
+    image: ""
   });
 
-  const speciesOptions = ["Aloe Vera", "Basil", "Cactus", "Fern", "Rosemary"];
+  const speciesOptions = Object.keys(speciesImages);
   const statusOptions = ["¡Regar!", "¡Cosechar!", "Recién plantada"];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (name === "species") {
+      setFormData((prev) => ({
+        ...prev,
+        species: value,
+        image: speciesImages[value] || ""
+      }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      const token = localStorage.getItem("token");
+    addPlant({
+      species: formData.species,
+      name: formData.name,
+      plantingDate: formData.plantingDate,
+      location: formData.location,
+      status: formData.status,
+      image: formData.image 
+    });
 
-      const response = await fetch("http://localhost:5000/api/plants", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`
-        },
-        body: JSON.stringify({
-          plantTypeId: await mapSpeciesToId(formData.species),
-          name: formData.name,
-          dateAdded: formData.plantingDate,
-          location: formData.location,
-          status: mapStatus(formData.status)
-        })
-      });
-
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(errorText);
-      }
-
-      const result = await response.json();
-      console.log("Planta agregada:", result);
-      navigate("/garden");
-    } catch (err) {
-      console.error("Error al agregar planta:", err.message);
-      alert("Error al agregar planta: " + err.message);
-    }
+    navigate("/garden");
   };
 
   const handleCancel = () => {
     navigate("/garden");
-  };
-
-  const mapStatus = (texto) => {
-    switch (texto) {
-      case "¡Regar!": return "Regar";
-      case "¡Cosechar!": return "Cosechar";
-      case "Recién plantada": return "RecienPlantada";
-      default: return "RecienPlantada";
-    }
-  };
-
-  const mapSpeciesToId = async (nombre) => {
-    const mapa = {
-      "Aloe Vera": 1,
-      "Basil": 2,
-      "Cactus": 3,
-      "Fern": 4,
-      "Rosemary": 5
-    };
-    return mapa[nombre] || 0;
   };
 
   return (

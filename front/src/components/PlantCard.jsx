@@ -14,7 +14,7 @@ const PlantCard = ({ name = "Sin nombre", image = null, status = "Recién planta
     <div className="plant-card">
       <Link to={ruta}>
         <img
-          src={image} // Mostrar imagen predeterminada si no hay una específica
+          src={image} 
           alt={name}
           className="plant-image"
         />
@@ -22,7 +22,7 @@ const PlantCard = ({ name = "Sin nombre", image = null, status = "Recién planta
       <h3 className="plant-name">{name}</h3>
       <p
         className="plant-status"
-        style={{ color: statusColors[status] || "#888" }} // Color según el estado
+        style={{ color: statusColors[status] || "#888" }}
       >
         {status}
       </p>
