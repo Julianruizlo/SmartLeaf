@@ -62,18 +62,18 @@
 }
 
 .register-button {
-  background-color: #04d960;
+  background-color: #00e600;
   border: none;
   padding: 12px;
   border-radius: 10px;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
 }
 
 .register-button:hover {
-  background-color: #03c255;
+  background-color: #888;
 }
 
 .alt-login {

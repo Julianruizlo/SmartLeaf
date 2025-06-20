@@ -9,7 +9,9 @@ export const Garden = () => {
   return (
     <div className="app">
       <PageHead />
+
       <div className="plant-list">
+       
         {plants.map((plant, index) => (
           <PlantCard
             key={index}
@@ -19,6 +21,7 @@ export const Garden = () => {
           />
         ))}
       </div>
+
       <div className="buttons">
         <button className="add-button" onClick={() => window.location.href = "/add"}>
           Agregar planta
@@ -29,4 +32,9 @@ export const Garden = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Garden;
+=======
+export default Garden;
+
+>>>>>>> eb48d63b2759472991cdc8b8fec0b6786d30be41

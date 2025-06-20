@@ -85,7 +85,7 @@ function Register() {
   return (
     <Container>
       <div className="app">
-        <PageHead/>
+        <PageHead  />
 
         {error && <p className="error-message">{error}</p>}
 

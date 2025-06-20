@@ -22,7 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
 
+=======
+>>>>>>> eb48d63b2759472991cdc8b8fec0b6786d30be41
 # === BACKEND (.NET / C#) ===
 **/bin/
 **/obj/

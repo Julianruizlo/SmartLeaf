@@ -1,7 +1,9 @@
 import { React, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
 import { Home, NotFound, Garden, Calendar, PlantIdentifier, PlantsLibrary, PlantConsultantAI, Profile, Settings } from "../pages/";
 import { Login, Registro, AddPlant, PlantDetails } from "../pages/";
+
 import { getToken } from "../utils/token";
 import { AuthRoute, BottomNav } from "../components/";
 import { PlantProvider } from "../components/PlantProvider"; // Importar el contexto
@@ -17,6 +19,7 @@ function App() {
   console.log("isAuthenticated:", isAuthenticated); // Depuración
 
   return (
+
     <PlantProvider> {/* Envolver las rutas con el proveedor */}
       <Router>
         <Routes>
@@ -40,6 +43,7 @@ function App() {
         </Routes>
       </Router>
     </PlantProvider>
+
   );
 }
 

@@ -50,6 +50,7 @@ function PlantLibrary() {
               <div key={i} className="plant-card-lib">
                 <img src={item.image} alt={item.name} className="plant-image-lib" />
                 <p className="plant-name-lib">{item.name}</p>
+                 <Link to="/descripcion" ></Link>
               </div>
             ))}
           </div>

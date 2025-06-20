@@ -41,6 +41,7 @@ builder.Services.AddSwaggerGen();
 
 // 2. Registrar servicios necesarios
 builder.Services.AddHttpClient<PlantIdService>();
+builder.Services.AddHttpClient<ChatbotService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
