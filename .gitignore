@@ -1,0 +1,77 @@
+
+Logs
+logs
+.log
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+.local
+
+Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+.ntvs
+*.njsproj
+*.sln
+*.sw?
+=== BACKEND (.NET / C#) ===
+/bin/
+/obj/
+*.exe
+*.dll
+*.pdb
+*.apphost.exe
+*.suo
+*.user
+*.cache
+*.log
+
+Visual Studio
+.vscode/
+.vs/
+.vsconfig
+
+=== FRONTEND (Node.js / React) ===
+node_modules/
+build/
+dist/
+.env
+.env.local
+.env..local
+
+Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+=== SISTEMA OPERATIVO / GENERAL ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+=== IMÁGENES DE EJEMPLO / TEMPORALES ===
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.tmp
+
+=== BACKEND ===
+backend/obj/backend.csproj.nuget.dgspec.json
+backend/obj/backend.csproj.nuget.g.props
+backend/obj/project.assets.json
+backend/obj/project.nuget.cache
+backend/obj/Debug/net9.0/backend.assets.cache
+backend/obj/Debug/net9.0/backend.csproj.AssemblyReference.cache
+backend/obj/Debug/net9.0/backend.GeneratedMSBuildEditorConfig.editorconfig
