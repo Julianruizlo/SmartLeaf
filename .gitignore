@@ -72,3 +72,9 @@ backend/obj/Debug/
 backend/bin/Debug/
 **/bin/
 **/obj/
+backend/obj/Debug/net9.0/backend.assets.cache
+backend/obj/Debug/net9.0/backend.csproj.FileListAbsolute.txt
+backend/obj/Debug/net9.0/backend.AssemblyInfo.cs
+backend/obj/Debug/net9.0/backend.assets.cache
+backend/obj/Debug/net9.0/apphost.exe
+backend/obj/Debug/net9.0/backend.csproj.FileListAbsolute.txt

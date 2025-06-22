@@ -37,7 +37,7 @@ export const Garden = () => {
           <button
             className="fab-option"
             title="Agregar por formulario"
-            onClick={() => navigate("/form")}
+            onClick={() => navigate("/add")}
           >
             <span role="img" aria-label="Formulario">📝</span>
           </button>

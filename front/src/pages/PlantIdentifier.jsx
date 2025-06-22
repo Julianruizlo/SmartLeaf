@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { identifyPlant } from '../services/plantIdAPI';
 import { Camera } from '../assets/';
 import { PageHead } from '../components';
@@ -8,6 +9,7 @@ const PlantIdentifier = () => {
   const [image, setImage] = useState(null);
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
@@ -38,6 +40,12 @@ const PlantIdentifier = () => {
   const handleReset = () => {
     setImage(null);
     setResult(null);
+  };
+
+  // Nuevo: Ir al formulario de agregar planta, pasando los datos identificados (por ahora solo los pasa)
+  const handleGoToAddPlant = () => {
+    // Puedes pasar los datos por estado, query o localStorage. Aquí usamos state:
+    navigate('/add', { state: { plantIdResult: result } });
   };
 
   const suggestion = result?.suggestions?.[0];
@@ -78,6 +86,15 @@ const PlantIdentifier = () => {
           <p><strong>Descripción:</strong> {details?.wiki_description?.value || 'No disponible'}</p>
           <a href={details?.url} target="_blank" rel="noopener noreferrer">Más info</a>
           <button onClick={handleReset} className="reset-button">Nueva identificación</button>
+
+          {/* Botón flotante para ir al formulario */}
+          <button
+            className="plant-id-fab"
+            title="Agregar a mis plantas"
+            onClick={handleGoToAddPlant}
+          >
+            +
+          </button>
         </div>
       )}
     </div>
