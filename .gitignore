@@ -70,3 +70,5 @@ desktop.ini
 === BACKEND ===
 backend/obj/Debug/
 backend/bin/Debug/
+**/bin/
+**/obj/
