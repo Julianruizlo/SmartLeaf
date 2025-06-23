@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { identifyPlant } from '../services/plantIdAPI';
 import { Camera } from '../assets/';
 import { PageHead } from '../components';
@@ -9,7 +8,6 @@ const PlantIdentifier = () => {
   const [image, setImage] = useState(null);
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
@@ -42,12 +40,6 @@ const PlantIdentifier = () => {
     setResult(null);
   };
 
-  // Nuevo: Ir al formulario de agregar planta, pasando los datos identificados (por ahora solo los pasa)
-  const handleGoToAddPlant = () => {
-    // Puedes pasar los datos por estado, query o localStorage. Aquí usamos state:
-    navigate('/add', { state: { plantIdResult: result } });
-  };
-
   const suggestion = result?.suggestions?.[0];
   const details = suggestion?.plant_details;
 
@@ -57,43 +49,66 @@ const PlantIdentifier = () => {
       {!result ? (
         <>
           <div className="plant-id-header-container">
-            <img className="plant-id-header-image" src={Camera} alt="Encabezado" />
+            {!image ? (
+              <img className="plant-id-header-image" src={Camera} alt="Encabezado" />
+            ) : (
+              <img
+                src={`data:image/jpeg;base64,${image}`}
+                alt="Vista previa"
+                className="plant-id-header-image"
+              />
+            )}
           </div>
 
           <div className="plant-id-guide-text">
-            <p>Por favor, toma una fotografía de tu planta o carga una imagen para 
-              que podamos analizarla.</p>
+            <p>
+              Por favor, toma una fotografía de tu planta o carga una imagen para 
+              que podamos analizarla.
+            </p>
           </div>
 
           <div className="plant-id-upload">
-            <input type="file" accept="image/*" onChange={handleImageUpload} />
-          </div>
-
-          {image && (
-            <div className="plant-id-preview">
-              <img src={`data:image/jpeg;base64,${image}`} alt="Preview" />
-              <button onClick={handleIdentify} disabled={loading}>
+            {!image ? (
+              <label htmlFor="plant-upload" className="pretty-upload-btn">
+                📷 Subir foto
+                <input
+                  id="plant-upload"
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                  style={{ display: "none" }}
+                />
+              </label>
+            ) : (
+              <button
+                onClick={handleIdentify}
+                disabled={loading}
+                className="pretty-upload-btn"
+                style={{ marginTop: "1rem" }}
+              >
                 {loading ? 'Identificando...' : 'Identificar planta'}
               </button>
-            </div>
-          )}
+            )}
+          </div>
         </>
       ) : (
         <div className="plant-id-result">
           <h3>Resultado:</h3>
+          {/* Mostrar la imagen subida en el resultado */}
+          <img
+            src={`data:image/jpeg;base64,${image}`}
+            alt="Planta identificada"
+            className="plant-id-result-image"
+            style={{ maxWidth: 250, borderRadius: 12, margin: "1rem auto" }}
+          />
           <p><strong>Nombre común:</strong> {details?.common_names?.join(', ') || 'No disponible'}</p>
           <p><strong>Nombre científico:</strong> {suggestion?.plant_name || 'No disponible'}</p>
           <p><strong>Descripción:</strong> {details?.wiki_description?.value || 'No disponible'}</p>
-          <a href={details?.url} target="_blank" rel="noopener noreferrer">Más info</a>
-          <button onClick={handleReset} className="reset-button">Nueva identificación</button>
-
-          {/* Botón flotante para ir al formulario */}
-          <button
-            className="plant-id-fab"
-            title="Agregar a mis plantas"
-            onClick={handleGoToAddPlant}
-          >
-            +
+          <button className="add-to-garden-btn" onClick={() => {/* lógica para agregar */}}>
+            Agregar al jardín
+          </button>
+          <button onClick={handleReset} className="reset-button" style={{ marginTop: "1.5rem" }}>
+            Nueva identificación
           </button>
         </div>
       )}

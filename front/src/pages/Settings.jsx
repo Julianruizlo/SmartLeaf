@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { PageHead } from "../components";
 import "../models/Settings.css";
 
-function Settings() {
+function Settings({ setTheme }) {
   const [language, setLanguage] = useState("es");
   const [notifications, setNotifications] = useState(false);
-  const [theme, setTheme] = useState("light");
+  const [theme, setThemeState] = useState("light");
 
   const handleSave = () => {
     console.log("Idioma:", language);
@@ -47,8 +47,12 @@ function Settings() {
           <label htmlFor="theme">Tema</label>
           <select
             id="theme"
+            name="theme"
             value={theme}
-            onChange={(e) => setTheme(e.target.value)}
+            onChange={(e) => {
+              setTheme(e.target.value);
+              setThemeState(e.target.value); // tu propio estado local si lo tienes
+            }}
           >
             <option value="light">Claro</option>
             <option value="dark">Oscuro</option>

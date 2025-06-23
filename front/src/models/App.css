@@ -98,4 +98,64 @@ body {
     margin-bottom: 5px;
     text-align: left;
 }
-  
+
+.dark-theme,
+body.dark-theme {
+  background-color: #181c1f !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-theme .app,
+body.dark-theme .app {
+  background-color: #181c1f !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-theme .settings-card,
+.dark-theme .plant-card,
+.dark-theme .plant-card-lib,
+.dark-theme .library-container,
+.dark-theme .calendar-container,
+.dark-theme .perfil-container,
+.dark-theme .register-box,
+.dark-theme .container,
+.dark-theme .chatbot-container {
+  background-color: #23272f !important;
+  color: #e0e0e0 !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.dark-theme input,
+.dark-theme select,
+.dark-theme textarea {
+  background-color: #23272f !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #444 !important;
+}
+
+.dark-theme .add-button,
+.dark-theme .edit-button,
+.dark-theme .settings-save-button,
+.dark-theme button {
+  background-color: #388e3c !important;
+  color: #fff !important;
+}
+
+.dark-theme .add-button:hover,
+.dark-theme .edit-button:hover,
+.dark-theme .settings-save-button:hover,
+.dark-theme button:hover {
+  background-color: #2e7d32 !important;
+}
+
+.dark-theme .bottom-nav {
+  background-color: #23272f !important;
+  color: #e0e0e0 !important;
+  border-top: 1px solid #333 !important;
+}
+
+.dark-theme .nav-item,
+.dark-theme .nav-item.active {
+  color: #8fbc8f !important;
+}
+

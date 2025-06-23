@@ -90,12 +90,13 @@
 
 .fab-container {
   position: fixed;
-  bottom: 32px;
-  right: 32px;
+  left: 60%;              /* Más a la derecha del centro */
+  bottom: 40px;           /* Más abajo */
+  transform: translateX(-50%);
   z-index: 100;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .fab-main {

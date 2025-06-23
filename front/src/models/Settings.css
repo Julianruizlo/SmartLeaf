@@ -61,3 +61,37 @@
 .settings-save-button:hover {
   background-color: #4caf50;
 }
+
+.dark-theme {
+  background-color: #23272f;
+}
+
+.dark-theme .settings-card {
+  background-color: #2e3440;
+  color: #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.dark-theme .settings-card h2 {
+  color: #8fbc8f;
+}
+
+.dark-theme .settings-option label {
+  color: #e0e0e0;
+}
+
+.dark-theme .settings-option select,
+.dark-theme .settings-option input[type="checkbox"] {
+  background-color: #23272f;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+.dark-theme .settings-save-button {
+  background-color: #388e3c;
+  color: #fff;
+}
+
+.dark-theme .settings-save-button:hover {
+  background-color: #2e7d32;
+}
