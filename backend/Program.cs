@@ -15,6 +15,7 @@ var config = builder.Configuration;
 var jwtKey = config["Jwt:Key"] ?? throw new InvalidOperationException("JWT key missing in configuration");
 
 // 1. Configurar autenticación JWT
+builder.Services.AddScoped<SupabaseDbService>();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -40,12 +41,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // 2. Registrar servicios necesarios
+builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<PlantIdService>();
 builder.Services.AddHttpClient<ChatbotService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
-        builder => builder.WithOrigins("http://localhost:5173")
+        builder => builder.WithOrigins("http://localhost:5174")
                           .AllowAnyHeader()
                           .AllowAnyMethod());
 });
